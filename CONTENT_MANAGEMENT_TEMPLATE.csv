@@ -1,0 +1,42 @@
+Asset Type,Category,File Name,Description,Status,Priority,Format,Size,Location,Alt Text,Notes
+Hero Image,Main,hero-facility-aerial.jpg,Aerial drone shot of main shrimp farm facility,Needed,High,JPEG,1920x1080,assets/images/hero/,Aerial view of MAPL Shrimp's main aquaculture facility in Madagascar
+Leadership Portrait,Company,ceo-portrait.jpg,Professional headshot of company CEO,Needed,High,JPEG,400x400,assets/images/company/,Professional portrait of MAPL Shrimp CEO
+Facility Exterior,Facilities,processing-plant-exterior.jpg,Main processing facility building exterior,Needed,High,JPEG,1920x1080,assets/images/facilities/,Exterior view of MAPL's HACCP certified processing facility
+Facility Interior,Facilities,processing-floor-interior.jpg,Interior of processing facility showing equipment,Needed,High,JPEG,1920x1080,assets/images/facilities/,Interior view of MAPL's state-of-the-art processing floor
+Shrimp Ponds,Aquaculture,pond-system-aerial.jpg,Aerial view of shrimp pond system,Needed,High,JPEG,1920x1080,assets/images/aquaculture/,Aerial view of MAPL's sustainable shrimp pond system
+Quality Control,Operations,quality-control-lab.jpg,Lab technicians performing quality tests,Needed,High,JPEG,1920x1080,assets/images/operations/,Quality control technicians testing shrimp products
+Packaging Line,Operations,automated-packaging.jpg,Automated packaging line in operation,Needed,High,JPEG,1920x1080,assets/images/operations/,Automated packaging line processing premium shrimp
+Team Photo,Company,leadership-team.jpg,Company leadership team group photo,Needed,High,JPEG,1920x1080,assets/images/company/,MAPL Shrimp leadership team
+Premium Shrimp,Products,raw-shrimp-showcase.jpg,High-quality raw shrimp product display,Needed,High,JPEG,1920x1080,assets/images/products/,Premium quality raw shrimp products
+Packaged Products,Products,retail-packaging.jpg,Retail-ready packaged shrimp products,Needed,High,JPEG,1920x1080,assets/images/products/,Retail packaging of MAPL premium shrimp
+Timeline 2000,History,company-founding-2000.jpg,Original facility and founding team,Needed,Medium,JPEG,1920x1080,assets/images/timeline/,MAPL Shrimp company founding in 2000
+Timeline 2005,History,rd-center-2005.jpg,R&D center establishment,Needed,Medium,JPEG,1920x1080,assets/images/timeline/,Research and Development center opening
+Timeline 2010,History,sustainability-2010.jpg,Sustainability initiatives launch,Needed,Medium,JPEG,1920x1080,assets/images/timeline/,Launch of sustainability initiatives
+Timeline 2015,History,international-expansion-2015.jpg,First international exports,Needed,Medium,JPEG,1920x1080,assets/images/timeline/,First international export shipment
+Timeline 2019,History,processing-facility-2019.jpg,New processing facility opening,Needed,Medium,JPEG,1920x1080,assets/images/timeline/,New processing facility grand opening
+Timeline 2022,History,awards-2022.jpg,Sustainability awards ceremony,Needed,Medium,JPEG,1920x1080,assets/images/timeline/,Sustainability awards recognition ceremony
+Timeline 2024,History,global-expansion-2024.jpg,Current global operations,Needed,Medium,JPEG,1920x1080,assets/images/timeline/,Current global expansion and operations
+ASC Certification,Certifications,asc-logo.png,Aquaculture Stewardship Council logo,Needed,High,PNG,300x150,assets/images/certifications/,ASC certification logo
+BAP Certification,Certifications,bap-logo.png,Best Aquaculture Practices logo,Needed,High,PNG,300x150,assets/images/certifications/,BAP certification logo
+HACCP Certification,Certifications,haccp-logo.png,HACCP food safety logo,Needed,High,PNG,300x150,assets/images/certifications/,HACCP certification logo
+BRC Certification,Certifications,brc-logo.png,BRC Grade A logo,Needed,High,PNG,300x150,assets/images/certifications/,BRC Grade A certification logo
+ISO 14001 Certification,Certifications,iso14001-logo.png,ISO 14001 environmental logo,Needed,High,PNG,300x150,assets/images/certifications/,ISO 14001 certification logo
+Carbon Neutral Certification,Certifications,carbon-neutral-logo.png,Carbon Trust certification logo,Needed,High,PNG,300x150,assets/images/certifications/,Carbon Neutral certification logo
+AquaFood Europe Logo,Partners,aquafood-europe-logo.png,European distributor logo,Needed,High,PNG,200x100,assets/images/partners/,AquaFood Europe partner logo
+Ocean Fresh Asia Logo,Partners,ocean-fresh-asia-logo.png,Asian retailer logo,Needed,High,PNG,200x100,assets/images/partners/,Ocean Fresh Asia partner logo
+Atlantic Seafood Logo,Partners,atlantic-seafood-logo.png,US processor logo,Needed,High,PNG,200x100,assets/images/partners/,Atlantic Seafood Co. partner logo
+Royal Palace Hotels Logo,Partners,royal-palace-logo.png,Middle East partner logo,Needed,High,PNG,200x100,assets/images/partners/,Royal Palace Hotels partner logo
+Tokyo Sushi Masters Logo,Clients,tokyo-sushi-logo.png,Japanese restaurant logo,Needed,High,PNG,150x75,assets/images/clients/,Tokyo Sushi Masters client logo
+Paris Fine Dining Logo,Clients,paris-dining-logo.png,French restaurant logo,Needed,High,PNG,150x75,assets/images/clients/,Paris Fine Dining client logo
+NY Seafood Market Logo,Clients,ny-seafood-logo.png,US retailer logo,Needed,High,PNG,150x75,assets/images/clients/,New York Seafood Market client logo
+Sydney Harbor Logo,Clients,sydney-harbor-logo.png,Australian partner logo,Needed,High,PNG,150x75,assets/images/clients/,Sydney Harbor Restaurants client logo
+Virtual Tour Ponds,360 Tour,ponds-360-tour.mp4,360 degree tour of pond system,Needed,Medium,MP4,1920x1080,assets/videos/virtual-tour/,360 degree virtual tour of shrimp ponds
+Virtual Tour Processing,360 Tour,processing-360-tour.mp4,360 degree processing facility tour,Needed,Medium,MP4,1920x1080,assets/videos/virtual-tour/,360 degree virtual tour of processing facility
+Drone Facility Overview,Drone,drone-facility-overview.mp4,Aerial drone footage of facility,Needed,Medium,MP4,1920x1080,assets/videos/drone/,Drone footage of MAPL facility
+Drone Pond System,Drone,drone-pond-system.mp4,Drone footage of pond system,Needed,Medium,MP4,1920x1080,assets/videos/drone/,Drone footage of shrimp pond system
+Garlic Butter Shrimp Recipe,Recipes,garlic-butter-shrimp.jpg,Professional food photography,Needed,Medium,JPEG,1920x1080,assets/images/recipes/,Garlic Butter Shrimp recipe photo
+Shrimp Ceviche Recipe,Recipes,shrimp-ceviche.jpg,Fresh ceviche preparation,Needed,Medium,JPEG,1920x1080,assets/images/recipes/,Shrimp Ceviche recipe photo
+Ocean Conservation Impact,CSR,ocean-conservation.jpg,Marine conservation project,Needed,Medium,JPEG,1920x1080,assets/images/csr/,Ocean conservation initiative impact
+Community Education,CSR,community-education.jpg,Local education program,Needed,Medium,JPEG,1920x1080,assets/images/csr/,Community education program
+Clean Water Access,CSR,clean-water-project.jpg,Water purification system,Needed,Medium,JPEG,1920x1080,assets/images/csr/,Clean water access project
+Women Empowerment,CSR,women-empowerment.jpg,Women's employment program,Needed,Medium,JPEG,1920x1080,assets/images/csr/,Women's empowerment initiative
