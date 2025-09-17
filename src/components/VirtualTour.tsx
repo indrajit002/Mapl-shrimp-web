@@ -7,6 +7,7 @@ import processingPlantInterior from "@/assets/processing-plant-interior.jpg";
 import researchFacility from "@/assets/research-facility.jpg";
 import conservationArea from "@/assets/conservation-area.jpg";
 import companyHeadquarters from "@/assets/company-headquarters.jpg";
+import virtualTourBg from "@/assets/Virtual_tour.png";
 import { 
   Play, 
   Pause, 
@@ -224,20 +225,19 @@ const VirtualTour = () => {
   const currentLocationData = tourLocations[currentLocation];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-slate-900 via-ocean-900 to-slate-800 text-white relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-ocean-900/20 to-slate-900/20"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_25%_25%,rgba(14,165,233,0.1)_0%,transparent_50%)]"></div>
-        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_75%_75%,rgba(59,130,246,0.1)_0%,transparent_50%)]"></div>
-      </div>
+    <section className="py-24 bg-white relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${virtualTourBg})` }}
+      ></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl eb-garamond font-bold mb-6 text-black">
             Virtual Tour
           </h2>
-          <p className="text-xl text-sand-200 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-xl text-black max-w-3xl mx-auto eb-garamond-text">
             Experience our facilities through immersive 360° tours and drone footage
           </p>
         </div>
@@ -245,7 +245,7 @@ const VirtualTour = () => {
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Video Player */}
           <div className="lg:col-span-2">
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 shadow-2xl overflow-hidden">
+            <Card className="bg-white border border-gray-200 shadow-2xl overflow-hidden">
               <CardContent className="p-0">
                 <div className="relative aspect-video bg-black">
                   <video
@@ -263,7 +263,7 @@ const VirtualTour = () => {
                     <Button
                       size="lg"
                       onClick={handlePlayPause}
-                      className="bg-white/20 hover:bg-white/30 backdrop-blur-sm border-white/30"
+                      className="bg-white/20 hover:bg-white/30 backdrop-blur-sm border-white/30 text-black"
                     >
                       {isPlaying ? <Pause className="h-8 w-8" /> : <Play className="h-8 w-8" />}
                     </Button>
@@ -303,7 +303,7 @@ const VirtualTour = () => {
 
                   {/* Location Badge */}
                   <div className="absolute top-4 left-4">
-                    <Badge className="bg-white/20 backdrop-blur-sm text-white border-white/30">
+                    <Badge className="bg-black/80 backdrop-blur-sm text-white border-gray-600">
                       {getTypeIcon(currentLocationData.type)} {currentLocationData.name}
                     </Badge>
                   </div>
@@ -314,19 +314,19 @@ const VirtualTour = () => {
 
           {/* Location Info */}
           <div className="space-y-6">
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 shadow-2xl">
+            <Card className="bg-white border border-gray-200 shadow-2xl">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
+                <CardTitle className="flex items-center gap-2 text-black">
                   <MapPin className="h-5 w-5" />
                   Current Location
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <h3 className="text-xl font-bold mb-2">{currentLocationData.name}</h3>
-                  <p className="text-sand-200 text-sm mb-4">{currentLocationData.description}</p>
+                  <h3 className="text-xl eb-garamond font-bold mb-2 text-black">{currentLocationData.name}</h3>
+                  <p className="text-gray-700 text-sm mb-4 eb-garamond-text">{currentLocationData.description}</p>
                   
-                  <div className="flex items-center gap-4 text-sm text-sand-300">
+                  <div className="flex items-center gap-4 text-sm text-gray-600">
                     <div className="flex items-center gap-1">
                       <Clock className="h-4 w-4" />
                       {currentLocationData.duration}
@@ -339,10 +339,10 @@ const VirtualTour = () => {
                 </div>
 
                 <div className="space-y-3">
-                  <h4 className="font-semibold">Key Highlights</h4>
+                  <h4 className="eb-garamond font-semibold text-black">Key Highlights</h4>
                   <ul className="space-y-1">
                     {currentLocationData.highlights.map((highlight, index) => (
-                      <li key={index} className="flex items-start gap-2 text-sm text-sand-200">
+                      <li key={index} className="flex items-start gap-2 text-sm text-gray-700">
                         <div className={`w-2 h-2 rounded-full ${getTypeColor(currentLocationData.type)} mt-2 flex-shrink-0`}></div>
                         {highlight}
                       </li>
@@ -352,9 +352,9 @@ const VirtualTour = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 shadow-2xl">
+            <Card className="bg-white border border-gray-200 shadow-2xl">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
+                <CardTitle className="flex items-center gap-2 text-black">
                   <Award className="h-5 w-5" />
                   Quick Facts
                 </CardTitle>
@@ -362,9 +362,9 @@ const VirtualTour = () => {
               <CardContent>
                 <div className="grid grid-cols-2 gap-3">
                   {currentLocationData.facts.map((fact, index) => (
-                    <div key={index} className="text-center p-3 bg-white/10 rounded-lg">
-                      <div className="text-lg font-bold text-ocean-400">{fact.value}</div>
-                      <div className="text-xs text-sand-300">{fact.label}</div>
+                    <div key={index} className="text-center p-3 bg-gray-50 rounded-lg shadow-sm">
+                      <div className="text-lg font-bold text-black">{fact.value}</div>
+                      <div className="text-xs text-gray-600">{fact.label}</div>
                     </div>
                   ))}
                 </div>
@@ -376,7 +376,7 @@ const VirtualTour = () => {
               <Button
                 variant="outline"
                 onClick={prevLocation}
-                className="flex-1 bg-white/10 border-white/20 text-white hover:bg-white/20"
+                className="flex-1 bg-white border-gray-200 text-black hover:bg-gray-50 shadow-lg"
               >
                 <ChevronLeft className="h-4 w-4 mr-2" />
                 Previous
@@ -384,14 +384,14 @@ const VirtualTour = () => {
               <Button
                 variant="outline"
                 onClick={nextLocation}
-                className="flex-1 bg-white/10 border-white/20 text-white hover:bg-white/20"
+                className="flex-1 bg-white border-gray-200 text-black hover:bg-gray-50 shadow-lg"
               >
                 Next
                 <ChevronRight className="h-4 w-4 ml-2" />
               </Button>
             </div>
 
-            <Button className="w-full bg-gradient-ocean hover:bg-gradient-aqua text-white shadow-lg hover:shadow-xl border-0">
+            <Button className="w-full bg-black hover:bg-gray-800 text-white border-0 shadow-lg">
               <ExternalLink className="h-4 w-4 mr-2" />
               Start Full Tour
             </Button>
@@ -400,15 +400,15 @@ const VirtualTour = () => {
 
         {/* Location Thumbnails */}
         <div className="mt-12">
-          <h3 className="text-2xl font-semibold mb-6 text-center">Explore All Locations</h3>
+          <h3 className="text-2xl eb-garamond font-semibold mb-6 text-center text-black">Explore All Locations</h3>
           <div className="grid md:grid-cols-5 gap-4">
             {tourLocations.map((location, index) => (
               <button
                 key={location.id}
                 onClick={() => setCurrentLocation(index)}
-                className={`relative aspect-video rounded-lg overflow-hidden transition-all duration-300 ${
+                className={`relative aspect-video rounded-lg overflow-hidden transition-all duration-300 shadow-lg hover:shadow-xl ${
                   currentLocation === index
-                    ? "ring-2 ring-ocean-400 scale-105"
+                    ? "ring-2 ring-black scale-105"
                     : "hover:scale-102"
                 }`}
               >
@@ -418,7 +418,7 @@ const VirtualTour = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                  <div className="text-center">
+                  <div className="text-center text-white">
                     <div className="text-2xl mb-1">{getTypeIcon(location.type)}</div>
                     <div className="text-sm font-medium">{location.name}</div>
                   </div>

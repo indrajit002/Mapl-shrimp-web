@@ -74,8 +74,8 @@ const Footer = () => {
                 alt="MAPL Shrimp Logo" 
                 className="h-16 w-auto mb-4 animate-logo-float"
               />
-              <h3 className="text-2xl font-serif font-bold">MAPL Shrimp</h3>
-              <p className="text-sm text-white/60 mt-2">
+              <h3 className="text-2xl eb-garamond font-bold">MAPL Shrimp</h3>
+              <p className="text-sm text-white/60 mt-2 eb-garamond-text">
                 From our ponds to your plate — sustainably.
               </p>
             </div>
@@ -96,7 +96,7 @@ const Footer = () => {
           {/* Links */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="font-semibold mb-4">{category}</h4>
+              <h4 className="eb-garamond font-semibold mb-4">{category}</h4>
               <ul className="space-y-2">
                 {links.map((link) => (
                   <li key={link.name}>
@@ -114,7 +114,7 @@ const Footer = () => {
 
           {/* Contact & Map */}
           <div className="lg:col-span-1">
-            <h4 className="font-semibold mb-4">Contact Info</h4>
+            <h4 className="eb-garamond font-semibold mb-4">Contact Info</h4>
             <div className="space-y-3 text-sm text-white/60">
               <div className="flex items-start gap-2 hover:text-white transition-colors duration-300">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 text-aqua-400" />

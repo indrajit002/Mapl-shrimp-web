@@ -27,10 +27,10 @@ class ErrorBoundary extends Component<Props, State> {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
+            <h1 className="text-2xl eb-garamond font-bold text-gray-900 mb-4">
               Something went wrong
             </h1>
-            <p className="text-gray-600 mb-4">
+            <p className="text-gray-600 mb-4 eb-garamond-text">
               We're sorry, but something unexpected happened.
             </p>
             <button

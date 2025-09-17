@@ -256,18 +256,18 @@ const GlobalPartners = () => {
   const currentPartnerData = filteredPartners[currentPartner] || partners[0];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 relative">
+    <section className="py-24 bg-gradient-to-br from-blue-200 via-blue-100 to-white relative">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-br from-ocean-100 to-coral-100"></div>
+      <div className="absolute inset-0 opacity-3">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/40 to-white/30"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-ocean-900 mb-6 animate-fade-in-up">
+          <h2 className="text-4xl md:text-5xl eb-garamond font-bold mb-6 animate-fade-in-up hover-underline-fade cursor-pointer" style={{ color: '#000000' }}>
             Global Partners & Clients
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-xl max-w-3xl mx-auto animate-fade-in-up eb-garamond-text" style={{ animationDelay: "0.2s", color: '#000000' }}>
             Trusted by leading companies and organizations worldwide for premium shrimp products and sustainable practices
           </p>
         </div>
@@ -281,11 +281,12 @@ const GlobalPartners = () => {
                 setActiveRegion(region.id);
                 setCurrentPartner(0);
               }}
-              className={`px-6 py-3 rounded-full transition-all duration-300 ${
+              className={`px-6 py-3 rounded-full transition-all duration-500 ease-out transform hover:scale-110 hover:-translate-y-1 hover:shadow-xl ${
                 activeRegion === region.id
-                  ? "bg-ocean-600 text-white shadow-lg scale-105"
-                  : "bg-white/70 text-ocean-600 hover:bg-ocean-50 hover:scale-102"
+                  ? "bg-white shadow-lg scale-105 font-semibold"
+                  : "bg-white/70 hover:bg-white hover:border-2 hover:border-blue-300 backdrop-blur-sm"
               }`}
+              style={{ color: '#000000' }}
             >
               {region.name} ({region.count})
             </button>
@@ -294,7 +295,7 @@ const GlobalPartners = () => {
 
         {/* Partner Spotlight */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-center text-ocean-900 mb-8">Partner Spotlight</h3>
+          <h3 className="text-2xl eb-garamond font-bold text-center text-ocean-900 mb-8">Partner Spotlight</h3>
           
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Partner Info */}
@@ -307,7 +308,7 @@ const GlobalPartners = () => {
                 />
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
-                    <h4 className="text-2xl font-bold text-ocean-900">{currentPartnerData.name}</h4>
+                    <h4 className="text-2xl eb-garamond font-bold text-ocean-900">{currentPartnerData.name}</h4>
                     <Badge className={getTypeColor(currentPartnerData.type)}>
                       {getTypeIcon(currentPartnerData.type)} {currentPartnerData.type}
                     </Badge>
@@ -332,7 +333,7 @@ const GlobalPartners = () => {
               </div>
 
               <div>
-                <h5 className="font-semibold text-ocean-900 mb-3">Key Achievements</h5>
+                <h5 className="eb-garamond font-semibold text-ocean-900 mb-3">Key Achievements</h5>
                 <ul className="space-y-2">
                   {currentPartnerData.achievements.map((achievement, index) => (
                     <li key={index} className="flex items-start gap-2">
@@ -364,7 +365,7 @@ const GlobalPartners = () => {
             {/* Partner Navigation */}
             <div className="space-y-6">
               <div className="flex justify-between items-center">
-                <h5 className="font-semibold text-ocean-900">All Partners</h5>
+                <h5 className="eb-garamond font-semibold text-ocean-900">All Partners</h5>
                 <div className="flex gap-2">
                   <Button
                     variant="outline"
@@ -392,11 +393,12 @@ const GlobalPartners = () => {
                   <button
                     key={partner.id}
                     onClick={() => setCurrentPartner(index)}
-                    className={`w-full p-4 rounded-lg text-left transition-all duration-300 ${
+                    className={`w-full p-4 rounded-lg text-left transition-all duration-300 ease-out ${
                       currentPartner === index
-                        ? "bg-ocean-100 border-2 border-ocean-300 scale-105"
-                        : "bg-white/70 hover:bg-ocean-50 hover:scale-102"
+                        ? "bg-white border-2 border-blue-300 scale-105 shadow-xl"
+                        : "bg-white/70 backdrop-blur-sm"
                     }`}
+                    style={{ color: '#000000' }}
                   >
                     <div className="flex items-center gap-3">
                       <img
@@ -421,36 +423,37 @@ const GlobalPartners = () => {
 
         {/* Client Testimonials */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-center text-ocean-900 mb-8">What Our Clients Say</h3>
+          <h3 className="text-2xl eb-garamond font-bold text-center mb-8" style={{ color: '#000000' }}>What Our Clients Say</h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {clients.map((client) => (
-              <Card key={client.id} className="bg-white/70 backdrop-blur-sm border-ocean-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <Card key={client.id} className="bg-white/90 backdrop-blur-sm border-white/30 shadow-lg hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-110 hover:-translate-y-3 hover:rotate-2 group">
                 <CardContent className="p-6 text-center">
                   <img
                     src={client.logo}
                     alt={client.name}
-                    className="w-16 h-16 object-contain mx-auto mb-4"
+                    className="w-16 h-16 object-contain mx-auto mb-4 transition-all duration-500 ease-out group-hover:scale-125 group-hover:rotate-12"
                   />
-                  <h4 className="font-semibold text-ocean-900 mb-2">{client.name}</h4>
-                  <div className="text-sm text-muted-foreground mb-3">{client.country}</div>
+                  <h4 className="eb-garamond font-semibold mb-2" style={{ color: '#000000' }}>{client.name}</h4>
+                  <div className="text-sm mb-3" style={{ color: '#000000' }}>{client.country}</div>
                   
                   <div className="flex justify-center mb-3">
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className={`h-4 w-4 ${
-                          i < client.rating ? "text-yellow-400 fill-current" : "text-gray-300"
+                        className={`h-4 w-4 transition-all duration-300 ease-out group-hover:scale-125 ${
+                          i < client.rating ? "text-yellow-400 fill-current group-hover:text-yellow-500" : "text-gray-300 group-hover:text-gray-400"
                         }`}
+                        style={{ transitionDelay: `${i * 50}ms` }}
                       />
                     ))}
                   </div>
                   
-                  <p className="text-sm text-muted-foreground italic mb-4">
+                  <p className="text-sm italic mb-4 transition-all duration-500 ease-out group-hover:scale-105" style={{ color: '#000000' }}>
                     "{client.testimonial}"
                   </p>
                   
-                  <Badge variant="outline" className="text-xs">
+                  <Badge variant="outline" className="text-xs transition-all duration-500 ease-out group-hover:bg-ocean-100 group-hover:border-ocean-300 group-hover:scale-110 group-hover:text-ocean-800">
                     {client.partnership}
                   </Badge>
                 </CardContent>
@@ -485,16 +488,16 @@ const GlobalPartners = () => {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <h3 className="text-2xl font-bold text-ocean-900 mb-4">Join Our Global Network</h3>
-          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <h3 className="text-2xl eb-garamond font-bold mb-4" style={{ color: '#000000' }}>Join Our Global Network</h3>
+          <p className="mb-8 max-w-2xl mx-auto eb-garamond-text" style={{ color: '#000000' }}>
             Become part of our worldwide network of partners and experience the quality and sustainability that sets us apart.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-ocean hover:bg-gradient-aqua text-white shadow-lg hover:shadow-xl border-0">
+            <Button size="lg" className="bg-gradient-ocean hover:bg-gradient-aqua text-white border-0 font-bold" style={{ boxShadow: '0 8px 25px rgba(0,0,0,0.3), 0 4px 10px rgba(0,0,0,0.2)' }}>
               <ExternalLink className="h-4 w-4 mr-2" />
               Become a Partner
             </Button>
-            <Button variant="outline" size="lg" className="hover:scale-105 transition-all duration-300">
+            <Button variant="outline" size="lg" className="hover:scale-105 transition-all duration-300 font-bold" style={{ color: '#000000', borderColor: '#000000', boxShadow: '0 8px 25px rgba(0,0,0,0.3), 0 4px 10px rgba(0,0,0,0.2)' }}>
               View Partnership Benefits
             </Button>
           </div>

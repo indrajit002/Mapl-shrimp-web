@@ -140,29 +140,20 @@ const About = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="about" className="py-32 bg-gradient-to-br from-teal-50 via-cyan-50 to-blue-50 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-100 to-cyan-100"></div>
-      </div>
-
-      {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-teal-300/20 rounded-full blur-xl"></div>
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-300/20 rounded-full blur-xl"></div>
-      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-emerald-300/20 rounded-full blur-lg"></div>
+    <section ref={sectionRef} id="about" className="py-32 bg-gray-50 relative overflow-hidden">
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div ref={contentRef} className="space-y-8">
             <div className="space-y-6">
-              <h2 className="text-5xl md:text-6xl font-serif font-bold text-foreground leading-tight">
+              <h2 className="text-5xl md:text-6xl eb-garamond font-bold leading-tight hover-underline-fade cursor-pointer" style={{ color: '#1b365d' }}>
                 About the Company
               </h2>
               <div className="space-y-4">
-                <p className="text-xl text-muted-foreground leading-relaxed">
+                <p className="text-xl leading-relaxed eb-garamond-text" style={{ color: '#000000' }}>
                   <strong>Mayank Aquaculture Pvt. Ltd. (MAPL)</strong> is a leader in sustainable shrimp farming in India. Founded in 1996 with just four ponds, we have grown to become a pioneering force in biosecure, sustainable aquaculture practices.
                 </p>
-                <p className="text-xl text-muted-foreground leading-relaxed">
+                <p className="text-xl leading-relaxed eb-garamond-text" style={{ color: '#000000' }}>
                   Today, we operate over 200+ hectares of farms and produce more than 1,000 MT of premium shrimp annually. Our strong global reputation is built on quality, traceability, and sustainability.
                 </p>
               </div>
@@ -177,26 +168,26 @@ const About = () => {
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500 flex items-center justify-center mt-1">
                     <Check className="h-4 w-4 text-white" />
                   </div>
-                  <span className="text-foreground font-medium text-lg">{feature}</span>
+                  <span className="text-foreground font-medium text-lg eb-garamond-medium">{feature}</span>
                 </div>
               ))}
             </div>
 
             {/* Company Divisions */}
             <div className="space-y-6">
-              <h3 className="text-3xl font-bold text-foreground">Our Divisions</h3>
+              <h3 className="text-3xl eb-garamond font-bold" style={{ color: '#1b365d' }}>Our Divisions</h3>
               <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="p-6 rounded-xl bg-white/60 backdrop-blur-sm border border-teal-100/50 shadow-lg hover:shadow-xl transition-all duration-300">
-                  <h4 className="text-xl font-bold text-teal-700 mb-3">Manorama Aquatics</h4>
-                  <p className="text-muted-foreground">Hatcheries & nurseries specializing in premium shrimp breeding and early-stage development.</p>
+                <div className="p-6 rounded-xl bg-white/60 backdrop-blur-sm border border-teal-100/50 transition-all duration-300" style={{ boxShadow: '0 25px 50px rgba(0,0,0,0.25), 0 10px 20px rgba(0,0,0,0.15)' }}>
+                  <h4 className="text-xl eb-garamond font-bold mb-3" style={{ color: '#1b365d' }}>Manorama Aquatics</h4>
+                  <p className="eb-garamond-text" style={{ color: '#000000' }}>Hatcheries & nurseries specializing in premium shrimp breeding and early-stage development.</p>
                 </div>
-                <div className="p-6 rounded-xl bg-white/60 backdrop-blur-sm border border-teal-100/50 shadow-lg hover:shadow-xl transition-all duration-300">
-                  <h4 className="text-xl font-bold text-teal-700 mb-3">Mayank Aqua Products</h4>
-                  <p className="text-muted-foreground">Shrimp farming & processing operations ensuring quality from pond to market.</p>
+                <div className="p-6 rounded-xl bg-white/60 backdrop-blur-sm border border-teal-100/50 transition-all duration-300" style={{ boxShadow: '0 25px 50px rgba(0,0,0,0.25), 0 10px 20px rgba(0,0,0,0.15)' }}>
+                  <h4 className="text-xl eb-garamond font-bold mb-3" style={{ color: '#1b365d' }}>Mayank Aqua Products</h4>
+                  <p className="eb-garamond-text" style={{ color: '#000000' }}>Shrimp farming & processing operations ensuring quality from pond to market.</p>
                 </div>
-                <div className="p-6 rounded-xl bg-white/60 backdrop-blur-sm border border-teal-100/50 shadow-lg hover:shadow-xl transition-all duration-300">
-                  <h4 className="text-xl font-bold text-teal-700 mb-3">Zhingalala</h4>
-                  <p className="text-muted-foreground">Pond-to-plate shrimp dining experience showcasing our premium products.</p>
+                <div className="p-6 rounded-xl bg-white/60 backdrop-blur-sm border border-teal-100/50 transition-all duration-300" style={{ boxShadow: '0 25px 50px rgba(0,0,0,0.25), 0 10px 20px rgba(0,0,0,0.15)' }}>
+                  <h4 className="text-xl eb-garamond font-bold mb-3" style={{ color: '#1b365d' }}>Zhingalala</h4>
+                  <p className="eb-garamond-text" style={{ color: '#000000' }}>Pond-to-plate shrimp dining experience showcasing our premium products.</p>
                 </div>
               </div>
             </div>

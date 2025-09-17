@@ -325,10 +325,10 @@ const MediaBlog = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-serif font-bold text-ocean-900 mb-8 animate-fade-in-up">
+          <h2 className="text-5xl md:text-6xl eb-garamond font-bold text-ocean-900 mb-8 animate-fade-in-up">
             Media & Blog
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in-up eb-garamond-text" style={{ animationDelay: "0.2s" }}>
             Stay updated with industry insights, recipes, sustainability stories, and company news
           </p>
         </div>
@@ -415,10 +415,10 @@ const MediaBlog = () => {
                         {filteredPosts.find(p => p.featured)?.category}
                       </Badge>
                     </div>
-                    <h3 className="text-3xl font-bold text-ocean-900 mb-6 leading-tight">
+                    <h3 className="text-3xl eb-garamond font-bold text-ocean-900 mb-6 leading-tight">
                       {filteredPosts.find(p => p.featured)?.title}
                     </h3>
-                    <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+                    <p className="text-lg text-muted-foreground mb-8 leading-relaxed eb-garamond-text">
                       {filteredPosts.find(p => p.featured)?.excerpt}
                     </p>
                     <div className="flex items-center justify-between">
@@ -464,7 +464,7 @@ const MediaBlog = () => {
                     </div>
                   </div>
                   <CardContent className="p-8">
-                    <h3 className="text-2xl font-bold text-ocean-900 mb-4 line-clamp-2 leading-tight">
+                    <h3 className="text-2xl eb-garamond font-bold text-ocean-900 mb-4 line-clamp-2 leading-tight">
                       {post.title}
                     </h3>
                     <p className="text-lg text-muted-foreground mb-6 line-clamp-3 leading-relaxed">
@@ -517,7 +517,7 @@ const MediaBlog = () => {
 
           <TabsContent value="press" className="space-y-12">
             <div className="text-center mb-12">
-              <h3 className="text-4xl font-bold text-ocean-900 mb-6">Press Releases</h3>
+              <h3 className="text-4xl eb-garamond font-bold text-ocean-900 mb-6">Press Releases</h3>
               <p className="text-muted-foreground max-w-2xl mx-auto">
                 Latest news and announcements from MAPL
               </p>
@@ -539,7 +539,7 @@ const MediaBlog = () => {
                     </div>
                   </div>
                   <CardContent className="p-6">
-                    <h4 className="text-lg font-bold text-ocean-900 mb-2 line-clamp-2">
+                    <h4 className="text-lg eb-garamond font-bold text-ocean-900 mb-2 line-clamp-2">
                       {release.title}
                     </h4>
                     <p className="text-muted-foreground mb-4 line-clamp-3">
@@ -561,7 +561,7 @@ const MediaBlog = () => {
 
           <TabsContent value="recipes" className="space-y-12">
             <div className="text-center mb-12">
-              <h3 className="text-4xl font-bold text-ocean-900 mb-6">Chef's Recipes</h3>
+              <h3 className="text-4xl eb-garamond font-bold text-ocean-900 mb-6">Chef's Recipes</h3>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 Professional recipes and cooking techniques from our partner chefs
               </p>
@@ -588,7 +588,7 @@ const MediaBlog = () => {
                     </div>
                   </div>
                   <CardContent className="p-8">
-                    <h4 className="text-2xl font-bold text-ocean-900 mb-4 leading-tight">{recipe.title}</h4>
+                    <h4 className="text-2xl eb-garamond font-bold text-ocean-900 mb-4 leading-tight">{recipe.title}</h4>
                     <p className="text-lg text-muted-foreground mb-6 leading-relaxed">{recipe.description}</p>
                     
                     <div className="grid grid-cols-3 gap-6 mb-6 text-center">
@@ -607,7 +607,7 @@ const MediaBlog = () => {
                     </div>
 
                     <div className="mb-4">
-                      <h5 className="font-semibold text-ocean-900 mb-2">Ingredients</h5>
+                      <h5 className="eb-garamond font-semibold text-ocean-900 mb-2">Ingredients</h5>
                       <ul className="text-sm text-muted-foreground space-y-1">
                         {recipe.ingredients.slice(0, 4).map((ingredient, index) => (
                           <li key={index} className="flex items-start gap-2">
@@ -638,7 +638,7 @@ const MediaBlog = () => {
 
           <TabsContent value="media" className="space-y-12">
             <div className="text-center mb-12">
-              <h3 className="text-4xl font-bold text-ocean-900 mb-6">Media Gallery</h3>
+              <h3 className="text-4xl eb-garamond font-bold text-ocean-900 mb-6">Media Gallery</h3>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 High-resolution images, videos, and media assets
               </p>

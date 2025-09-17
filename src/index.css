@@ -1,10 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&family=EB+Garamond:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* MAPL Shrimp Design System - Premium, Ocean-Inspired, Lovable */
+
+/* EB Garamond font for headings */
+.eb-garamond {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* EB Garamond font for body text */
+.eb-garamond-text {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* EB Garamond font for medium weight text */
+.eb-garamond-medium {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* EB Garamond font for light text */
+.eb-garamond-light {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Scrollbar hide utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom hover underline with faded shadow */
+.hover-underline-fade {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-underline-fade::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1b365d, #1b365d);
+  box-shadow: 0 2px 8px rgba(27, 54, 93, 0.3);
+  transition: width 0.3s ease-in-out;
+}
+
+.hover-underline-fade:hover::after {
+  width: 100%;
+}
 
 @layer base {
   :root {

@@ -29,10 +29,10 @@ const CompanyCard = ({ name, logo, description, partnership, delay = 0 }: Compan
             {logo}
           </div>
           <div className="flex-1">
-            <h3 className="font-bold text-xl text-slate-800 mb-2 group-hover:text-indigo-700 transition-colors duration-300">
+            <h3 className="eb-garamond font-bold text-xl text-slate-800 mb-2 group-hover:text-indigo-700 transition-colors duration-300">
               {name}
             </h3>
-            <p className="text-slate-600 mb-3 font-medium">{description}</p>
+            <p className="text-slate-600 mb-3 font-medium eb-garamond-text">{description}</p>
           </div>
         </div>
         

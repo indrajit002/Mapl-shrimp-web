@@ -30,7 +30,7 @@ const Hero = ({ title, subtitle, ctaText }: HeroProps) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoaded(true);
-    }, 100);
+    }, 50);
 
     return () => clearTimeout(timer);
   }, []);
@@ -93,7 +93,7 @@ const Hero = ({ title, subtitle, ctaText }: HeroProps) => {
         <div className="max-w-3xl">
           <h1 
             ref={titleRef}
-            className={`text-fluid-4xl md:text-fluid-5xl font-serif font-bold text-white leading-tight mb-6 transition-all duration-1000 ${
+            className={`text-fluid-4xl md:text-fluid-5xl eb-garamond font-bold text-white leading-tight mb-6 transition-all duration-1000 ${
               isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
             style={{ textShadow: "0 4px 20px rgba(0,0,0,0.3)" }}
@@ -102,7 +102,7 @@ const Hero = ({ title, subtitle, ctaText }: HeroProps) => {
           </h1>
           <p 
             ref={subtitleRef}
-            className={`text-fluid-lg md:text-fluid-xl text-sand-200 mb-8 transition-all duration-1000 delay-200 ${
+            className={`text-fluid-lg md:text-fluid-xl text-sand-200 mb-8 transition-all duration-1000 delay-200 eb-garamond-text ${
               isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
             style={{ textShadow: "0 2px 10px rgba(0,0,0,0.2)" }}

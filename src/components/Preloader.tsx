@@ -39,10 +39,10 @@ const Preloader = () => {
           className="mb-4"
         />
         <div className="text-center">
-          <h2 className="text-3xl font-serif font-bold text-ocean-900 mb-2 animate-fade-in">
+          <h2 className="text-3xl eb-garamond font-bold text-ocean-900 mb-2 animate-fade-in">
             MAPL Shrimp
           </h2>
-          <p className="text-ocean-700 text-lg animate-fade-in" style={{ animationDelay: '0.5s' }}>
+          <p className="text-ocean-700 text-lg animate-fade-in eb-garamond-text" style={{ animationDelay: '0.5s' }}>
             Loading premium experience...
           </p>
         </div>

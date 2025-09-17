@@ -248,10 +248,10 @@ const CSRSustainability = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-serif font-bold text-green-900 mb-8 animate-fade-in-up">
+          <h2 className="text-5xl md:text-6xl eb-garamond font-bold text-green-900 mb-8 animate-fade-in-up">
             Sustainability & Social Impact
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in-up eb-garamond-text" style={{ animationDelay: "0.2s" }}>
             Committed to environmental stewardship, community development, and sustainable aquaculture practices
           </p>
         </div>
@@ -296,10 +296,10 @@ const CSRSustainability = () => {
                   <div className="p-4 bg-green-100 rounded-2xl shadow-lg">
                     <Leaf className="h-10 w-10 text-green-600" />
                   </div>
-                  <h3 className="text-4xl font-bold text-green-900">Our Commitment</h3>
+                  <h3 className="text-4xl eb-garamond font-bold text-green-900">Our Commitment</h3>
                 </div>
                 <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-green-100/50 shadow-lg">
-                  <p className="text-xl text-muted-foreground leading-relaxed">
+                  <p className="text-xl text-muted-foreground leading-relaxed eb-garamond-text">
                     At MAPL, sustainability isn't just a goal—it's our foundation. We've built our entire operation 
                     around principles that protect our oceans, support our communities, and ensure a thriving future 
                     for generations to come.
@@ -416,7 +416,7 @@ const CSRSustainability = () => {
 
           <TabsContent value="certifications" className="space-y-12">
             <div className="text-center mb-12">
-              <h3 className="text-4xl font-bold text-green-900 mb-6">Our Certifications</h3>
+              <h3 className="text-4xl eb-garamond font-bold text-green-900 mb-6">Our Certifications</h3>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 Recognized by leading international organizations for our commitment to quality, safety, and sustainability
               </p>
@@ -458,7 +458,7 @@ const CSRSustainability = () => {
 
           <TabsContent value="impact" className="space-y-12">
             <div className="text-center mb-12">
-              <h3 className="text-4xl font-bold text-green-900 mb-6">Impact Stories</h3>
+              <h3 className="text-4xl eb-garamond font-bold text-green-900 mb-6">Impact Stories</h3>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 Real stories of positive change in our communities and environment
               </p>
@@ -486,7 +486,7 @@ const CSRSustainability = () => {
                     </div>
                   </div>
                   <CardContent className="p-8">
-                    <h4 className="text-2xl font-bold text-green-900 mb-4">{story.title}</h4>
+                    <h4 className="text-2xl eb-garamond font-bold text-green-900 mb-4">{story.title}</h4>
                     <p className="text-lg text-muted-foreground mb-6 leading-relaxed">{story.description}</p>
                     <div className="p-4 bg-green-50 rounded-xl">
                       <div className="flex items-center gap-3 mb-2">
@@ -503,7 +503,7 @@ const CSRSustainability = () => {
 
           <TabsContent value="metrics" className="space-y-12">
             <div className="text-center mb-12">
-              <h3 className="text-4xl font-bold text-green-900 mb-6">Sustainability Metrics</h3>
+              <h3 className="text-4xl eb-garamond font-bold text-green-900 mb-6">Sustainability Metrics</h3>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 Track our progress towards environmental and social goals
               </p>
@@ -516,7 +516,7 @@ const CSRSustainability = () => {
                     <div className={`mx-auto ${metric.color}`}>
                       {metric.icon}
                     </div>
-                    <h4 className="text-xl font-semibold text-green-900 mb-3">{metric.category}</h4>
+                    <h4 className="text-xl eb-garamond font-semibold text-green-900 mb-3">{metric.category}</h4>
                     <div className="text-4xl font-bold text-green-600 mb-3">{metric.value}</div>
                     <div className="text-base text-muted-foreground mb-4">{metric.unit}</div>
                     <div className="flex items-center justify-center gap-3 text-base">

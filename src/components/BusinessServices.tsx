@@ -170,23 +170,14 @@ const BusinessServices = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-32 bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-indigo-100"></div>
-      </div>
-
-      {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-blue-300/20 rounded-full blur-xl"></div>
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-indigo-300/20 rounded-full blur-xl"></div>
-      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-sky-300/20 rounded-full blur-lg"></div>
+    <section ref={sectionRef} className="py-32 bg-white relative overflow-hidden">
       
       <div className="container mx-auto px-6 relative z-10">
         <div ref={headerRef} className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-serif font-bold text-ocean-900 mb-8">
+          <h2 className="text-5xl md:text-6xl eb-garamond font-bold text-ocean-900 mb-8">
             {t('services.title')}
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed eb-garamond-text">
             {t('services.subtitle')}
           </p>
         </div>
@@ -199,8 +190,8 @@ const BusinessServices = () => {
                 <Package className="h-8 w-8 text-blue-600" />
               </div>
               <div>
-                <h3 className="text-3xl font-serif font-bold text-blue-900">{t('services.import.title')}</h3>
-                <p className="text-lg text-muted-foreground">{t('services.import.subtitle')}</p>
+                <h3 className="text-3xl eb-garamond font-bold text-blue-900">{t('services.import.title')}</h3>
+                <p className="text-lg text-muted-foreground eb-garamond-text">{t('services.import.subtitle')}</p>
               </div>
             </div>
 
@@ -218,10 +209,10 @@ const BusinessServices = () => {
                       </div>
                       <div className="flex-1">
                         <div className="flex items-start justify-between mb-4">
-                          <h4 className="text-xl font-bold text-blue-900 group-hover:text-blue-900 transition-colors duration-300 ease-out">{service.title}</h4>
+                          <h4 className="text-xl eb-garamond font-bold text-blue-900 group-hover:text-blue-900 transition-colors duration-300 ease-out">{service.title}</h4>
                           <Badge variant="outline" className="px-4 py-2 text-sm font-medium group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 transition-all duration-300 ease-out">{service.price}</Badge>
                         </div>
-                        <p className="text-base text-muted-foreground mb-4 group-hover:text-muted-foreground transition-colors duration-300 ease-out leading-relaxed">{service.description}</p>
+                        <p className="text-base text-muted-foreground mb-4 group-hover:text-muted-foreground transition-colors duration-300 ease-out leading-relaxed eb-garamond-text">{service.description}</p>
                         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
                           <span className="group-hover:text-muted-foreground transition-colors duration-300 ease-out font-medium">Min: {service.minimum}</span>
                         </div>
@@ -254,8 +245,8 @@ const BusinessServices = () => {
                 <Ship className="h-8 w-8 text-emerald-600" />
               </div>
               <div>
-                <h3 className="text-3xl font-serif font-bold text-emerald-900">{t('services.export.title')}</h3>
-                <p className="text-lg text-muted-foreground">{t('services.export.subtitle')}</p>
+                <h3 className="text-3xl eb-garamond font-bold text-emerald-900">{t('services.export.title')}</h3>
+                <p className="text-lg text-muted-foreground eb-garamond-text">{t('services.export.subtitle')}</p>
               </div>
             </div>
 
@@ -273,10 +264,10 @@ const BusinessServices = () => {
                       </div>
                       <div className="flex-1">
                         <div className="flex items-start justify-between mb-4">
-                          <h4 className="text-xl font-bold text-emerald-900 group-hover:text-emerald-900 transition-colors duration-300 ease-out">{capability.title}</h4>
+                          <h4 className="text-xl eb-garamond font-bold text-emerald-900 group-hover:text-emerald-900 transition-colors duration-300 ease-out">{capability.title}</h4>
                           <Badge className="bg-emerald-400/10 text-emerald-600 px-4 py-2 text-sm font-medium group-hover:bg-emerald-400 group-hover:text-white transition-all duration-300 ease-out">{capability.volume}</Badge>
                         </div>
-                        <p className="text-base text-muted-foreground mb-4 group-hover:text-muted-foreground transition-colors duration-300 ease-out leading-relaxed">{capability.description}</p>
+                        <p className="text-base text-muted-foreground mb-4 group-hover:text-muted-foreground transition-colors duration-300 ease-out leading-relaxed eb-garamond-text">{capability.description}</p>
                         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
                           <span className="group-hover:text-muted-foreground transition-colors duration-300 ease-out font-medium">Markets: {capability.markets.join(", ")}</span>
                         </div>

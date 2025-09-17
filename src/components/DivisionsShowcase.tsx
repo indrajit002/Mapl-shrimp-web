@@ -252,23 +252,14 @@ const DivisionsShowcase = () => {
   const colors = getColorClasses(activeDivisionData.color);
 
   return (
-    <section className="py-32 bg-gradient-to-br from-slate-50 via-blue-50 to-orange-50 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-br from-ocean-100 to-coral-100"></div>
-      </div>
-
-      {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-ocean-200/20 rounded-full blur-xl"></div>
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-coral-200/20 rounded-full blur-xl"></div>
-      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-green-200/20 rounded-full blur-lg"></div>
+    <section className="py-32 bg-white relative overflow-hidden">
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl font-serif font-bold text-ocean-900 mb-8 animate-fade-in-up">
+          <h2 className="text-5xl md:text-6xl eb-garamond font-bold text-ocean-900 mb-8 animate-fade-in-up hover-underline-fade cursor-pointer" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
             Our Divisions
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in-up eb-garamond-text" style={{ animationDelay: "0.2s" }}>
             Discover our comprehensive operations across aquaculture, processing, sustainability, and research
           </p>
         </div>
@@ -279,7 +270,10 @@ const DivisionsShowcase = () => {
               <TabsTrigger 
                 key={division.id} 
                 value={division.id}
-                className="flex items-center justify-center gap-2 px-6 py-5 rounded-xl font-semibold transition-all duration-300 text-center min-h-[70px] bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl border border-ocean-100/30 data-[state=active]:bg-gradient-to-r data-[state=active]:from-ocean-500 data-[state=active]:to-ocean-600 data-[state=active]:text-white data-[state=active]:shadow-2xl data-[state=inactive]:text-ocean-600 data-[state=inactive]:hover:text-ocean-700 data-[state=inactive]:hover:bg-ocean-50"
+                className="flex items-center justify-center gap-2 px-6 py-5 rounded-xl font-semibold transition-all duration-300 text-center min-h-[70px] bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl border-2 border-ocean-200/40 hover:border-ocean-300/60 data-[state=active]:text-white data-[state=active]:shadow-2xl data-[state=active]:border-ocean-400/50 data-[state=inactive]:text-ocean-600 data-[state=inactive]:hover:text-ocean-700 data-[state=inactive]:hover:bg-ocean-50"
+                style={{ 
+                  backgroundColor: activeDivision === division.id ? '#1b365d' : undefined 
+                }}
               >
                 <div className="flex items-center gap-2">
                   <div className="flex items-center justify-center">
@@ -301,8 +295,8 @@ const DivisionsShowcase = () => {
                       {division.icon}
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-4xl font-bold text-ocean-900 mb-3">{division.name}</h3>
-                      <p className="text-xl text-muted-foreground mb-6 leading-relaxed">{division.description}</p>
+                      <h3 className="text-4xl eb-garamond font-bold text-ocean-900 mb-3" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>{division.name}</h3>
+                      <p className="text-xl text-muted-foreground mb-6 leading-relaxed eb-garamond-text">{division.description}</p>
                       <div className="flex flex-wrap gap-3">
                         {division.certifications.map((cert) => (
                           <Badge key={cert} variant="outline" className={`${colors.border} px-3 py-1 text-sm font-medium`}>
@@ -331,7 +325,7 @@ const DivisionsShowcase = () => {
 
                   {/* Key Features */}
                   <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-ocean-100/50 shadow-lg">
-                    <h4 className="text-2xl font-semibold text-ocean-900 mb-6">Key Features</h4>
+                    <h4 className="text-2xl eb-garamond font-semibold text-ocean-900 mb-6">Key Features</h4>
                     <ul className="space-y-4">
                       {division.features.map((feature, index) => (
                         <li key={index} className="flex items-center gap-3">
@@ -347,7 +341,7 @@ const DivisionsShowcase = () => {
                 <div className="space-y-8">
                   <Card className="bg-white/80 backdrop-blur-sm border border-ocean-100/50 shadow-xl hover:shadow-2xl transition-all duration-300">
                     <CardHeader className="pb-4">
-                      <CardTitle className="flex items-center gap-3 text-xl">
+                      <CardTitle className="flex items-center gap-3 text-xl" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.1)' }}>
                         <MapPin className="h-6 w-6 text-ocean-600" />
                         Division Information
                       </CardTitle>
@@ -376,7 +370,7 @@ const DivisionsShowcase = () => {
 
                   <Card className="bg-white/80 backdrop-blur-sm border border-ocean-100/50 shadow-xl hover:shadow-2xl transition-all duration-300">
                     <CardHeader className="pb-4">
-                      <CardTitle className="flex items-center gap-3 text-xl">
+                      <CardTitle className="flex items-center gap-3 text-xl" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.1)' }}>
                         <TrendingUp className="h-6 w-6 text-green-600" />
                         Recent Achievements
                       </CardTitle>
@@ -395,7 +389,7 @@ const DivisionsShowcase = () => {
 
                   <Card className="bg-white/80 backdrop-blur-sm border border-ocean-100/50 shadow-xl hover:shadow-2xl transition-all duration-300">
                     <CardHeader className="pb-4">
-                      <CardTitle className="flex items-center gap-3 text-xl">
+                      <CardTitle className="flex items-center gap-3 text-xl" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.1)' }}>
                         <Globe className="h-6 w-6 text-purple-600" />
                         Future Plans
                       </CardTitle>
@@ -419,7 +413,7 @@ const DivisionsShowcase = () => {
                 <Button 
                   asChild 
                   size="lg" 
-                  className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 border-0 px-10 py-5 text-xl font-semibold rounded-2xl"
+                  className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 border-1 border-emerald-400/30 hover:border-emerald-300/50 px-10 py-5 text-xl font-semibold rounded-2xl"
                 >
                   <Link to={`/divisions/${division.id}`}>
                     Learn More
@@ -429,7 +423,7 @@ const DivisionsShowcase = () => {
                 <Button 
                   asChild
                   size="lg" 
-                  className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 border-0 px-10 py-5 text-xl font-semibold rounded-2xl"
+                  className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 border-1 border-amber-400/30 hover:border-amber-300/50 px-10 py-5 text-xl font-semibold rounded-2xl"
                 >
                   <div>
                     <Play className="mr-3 h-6 w-6" />

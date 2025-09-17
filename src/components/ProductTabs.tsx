@@ -40,10 +40,10 @@ const ProductTabs = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-fluid-3xl md:text-fluid-4xl font-serif font-bold text-foreground mb-4">
+          <h2 className="text-fluid-3xl md:text-fluid-4xl eb-garamond font-bold text-foreground mb-4">
             Premium Product Range
           </h2>
-          <p className="text-fluid-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-fluid-lg text-muted-foreground max-w-2xl mx-auto eb-garamond-text">
             From ocean to plate, discover our selection of sustainably-farmed, 
             premium quality shrimp varieties
           </p>
@@ -71,7 +71,7 @@ const ProductTabs = () => {
               <Card className="p-8 border-border/50 bg-card/50 backdrop-blur-sm">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-2xl font-serif font-bold text-foreground mb-2">
+                    <h3 className="text-2xl eb-garamond font-bold text-foreground mb-2">
                       {product.name}
                     </h3>
                     <p className="text-sm text-muted-foreground italic mb-4">
@@ -81,7 +81,7 @@ const ProductTabs = () => {
 
                     <div className="space-y-4">
                       <div>
-                        <h4 className="font-semibold text-foreground mb-2">
+                        <h4 className="eb-garamond font-semibold text-foreground mb-2">
                           Available Sizes
                         </h4>
                         <div className="flex flex-wrap gap-2">
@@ -98,7 +98,7 @@ const ProductTabs = () => {
                       </div>
 
                       <div>
-                        <h4 className="font-semibold text-foreground mb-2">
+                        <h4 className="eb-garamond font-semibold text-foreground mb-2">
                           Key Features
                         </h4>
                         <ul className="space-y-1">

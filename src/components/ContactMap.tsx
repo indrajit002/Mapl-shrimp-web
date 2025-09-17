@@ -57,10 +57,10 @@ const ContactMap = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-fluid-3xl md:text-fluid-4xl font-serif font-bold text-foreground mb-4">
+          <h2 className="text-fluid-3xl md:text-fluid-4xl eb-garamond font-bold text-foreground mb-4">
             Get in Touch
           </h2>
-          <p className="text-fluid-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-fluid-lg text-muted-foreground max-w-2xl mx-auto eb-garamond-text">
             Ready to experience premium Madagascar shrimp? Contact our team for samples, 
             pricing, or partnership opportunities.
           </p>
@@ -138,7 +138,7 @@ const ContactMap = () => {
           {/* Map & Contact Info */}
           <div className="space-y-6">
             <Card className="p-8 border-border/50 bg-card/50 backdrop-blur-sm">
-              <h3 className="text-xl font-semibold text-foreground mb-6">
+              <h3 className="text-xl eb-garamond font-semibold text-foreground mb-6">
                 Visit Our Farm
               </h3>
               <div className="space-y-4">

@@ -35,10 +35,10 @@ const Gallery = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-fluid-3xl md:text-fluid-4xl font-serif font-bold text-foreground mb-4">
+          <h2 className="text-fluid-3xl md:text-fluid-4xl eb-garamond font-bold text-foreground mb-4">
             Experience Excellence
           </h2>
-          <p className="text-fluid-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-fluid-lg text-muted-foreground max-w-2xl mx-auto eb-garamond-text">
             Take a closer look at our sustainable farming operations and premium products
           </p>
         </div>

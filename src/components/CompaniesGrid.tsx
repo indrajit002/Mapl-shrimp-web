@@ -62,7 +62,7 @@ const CompaniesGrid = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h2 className="text-5xl md:text-6xl font-serif font-bold bg-gradient-to-r from-slate-800 via-blue-800 to-indigo-800 bg-clip-text text-transparent mb-6 leading-tight">
+          <h2 className="text-5xl md:text-6xl eb-garamond font-bold bg-gradient-to-r from-slate-800 via-blue-800 to-indigo-800 bg-clip-text text-transparent mb-6 leading-tight">
             Trusted by Industry Leaders
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
