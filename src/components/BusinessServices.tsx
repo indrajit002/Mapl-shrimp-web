@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLanguage } from "@/contexts/LanguageContext";
+import globalVideo from "@/assets/Global_video.mp4";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -170,14 +171,34 @@ const BusinessServices = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-32 bg-white relative overflow-hidden">
+    <section ref={sectionRef} className="py-32 relative overflow-hidden">
+      {/* Video Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src={globalVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      
+      {/* Color Overlays */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/15 to-indigo-600/25"></div>
+      <div className="absolute inset-0 bg-gradient-to-tl from-ocean-500/30 via-transparent to-coral-500/20"></div>
+      
+      {/* Background Overlay */}
+      <div className="absolute inset-0 bg-black/20 backdrop-blur-sm"></div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div ref={headerRef} className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl eb-garamond font-bold text-ocean-900 mb-8">
+        <div ref={headerRef} className="text-center mb-20 bg-black/30 backdrop-blur-md rounded-3xl p-12">
+          <h2 className="text-5xl md:text-6xl eb-garamond font-bold text-white mb-8" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
             {t('services.title')}
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed eb-garamond-text">
+          <p className="text-xl md:text-2xl text-white max-w-4xl mx-auto leading-relaxed eb-garamond-text" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.6)' }}>
             {t('services.subtitle')}
           </p>
         </div>
@@ -190,8 +211,8 @@ const BusinessServices = () => {
                 <Package className="h-8 w-8 text-blue-600" />
               </div>
               <div>
-                <h3 className="text-3xl eb-garamond font-bold text-blue-900">{t('services.import.title')}</h3>
-                <p className="text-lg text-muted-foreground eb-garamond-text">{t('services.import.subtitle')}</p>
+                <h3 className="text-3xl eb-garamond font-bold text-white" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>{t('services.import.title')}</h3>
+                <p className="text-lg text-white eb-garamond-text" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.6)' }}>{t('services.import.subtitle')}</p>
               </div>
             </div>
 
@@ -200,7 +221,7 @@ const BusinessServices = () => {
                 <Card 
                   key={service.title} 
                   ref={(el) => (cardRefs.current[index] = el)}
-                  className="bg-white/80 backdrop-blur-sm border border-blue-100/50 shadow-xl hover:shadow-2xl relative group hover:scale-[1.02] transition-all duration-500 ease-out rounded-2xl"
+                  className="bg-white/90 backdrop-blur-md border border-blue-100/50 shadow-xl hover:shadow-2xl relative group hover:scale-[1.02] transition-all duration-500 ease-out rounded-2xl"
                 >
                   <CardContent className="p-8">
                     <div className="flex items-start gap-6">
@@ -209,12 +230,12 @@ const BusinessServices = () => {
                       </div>
                       <div className="flex-1">
                         <div className="flex items-start justify-between mb-4">
-                          <h4 className="text-xl eb-garamond font-bold text-blue-900 group-hover:text-blue-900 transition-colors duration-300 ease-out">{service.title}</h4>
+                          <h4 className="text-xl eb-garamond font-bold text-black group-hover:text-black transition-colors duration-300 ease-out">{service.title}</h4>
                           <Badge variant="outline" className="px-4 py-2 text-sm font-medium group-hover:bg-blue-500 group-hover:text-white group-hover:border-blue-500 transition-all duration-300 ease-out">{service.price}</Badge>
                         </div>
-                        <p className="text-base text-muted-foreground mb-4 group-hover:text-muted-foreground transition-colors duration-300 ease-out leading-relaxed eb-garamond-text">{service.description}</p>
-                        <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-                          <span className="group-hover:text-muted-foreground transition-colors duration-300 ease-out font-medium">Min: {service.minimum}</span>
+                        <p className="text-base text-black mb-4 group-hover:text-black transition-colors duration-300 ease-out leading-relaxed eb-garamond-text font-bold">{service.description}</p>
+                        <div className="flex items-center gap-4 text-sm text-black mb-4">
+                          <span className="group-hover:text-black transition-colors duration-300 ease-out font-bold">Min: {service.minimum}</span>
                         </div>
                         <div className="flex flex-wrap gap-2">
                           {service.features.map((feature, idx) => (
@@ -245,8 +266,8 @@ const BusinessServices = () => {
                 <Ship className="h-8 w-8 text-emerald-600" />
               </div>
               <div>
-                <h3 className="text-3xl eb-garamond font-bold text-emerald-900">{t('services.export.title')}</h3>
-                <p className="text-lg text-muted-foreground eb-garamond-text">{t('services.export.subtitle')}</p>
+                <h3 className="text-3xl eb-garamond font-bold text-white" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>{t('services.export.title')}</h3>
+                <p className="text-lg text-white eb-garamond-text" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.6)' }}>{t('services.export.subtitle')}</p>
               </div>
             </div>
 
@@ -255,7 +276,7 @@ const BusinessServices = () => {
                 <Card 
                   key={capability.title} 
                   ref={(el) => (cardRefs.current[index + 2] = el)}
-                  className="bg-white/80 backdrop-blur-sm border border-emerald-100/50 shadow-xl hover:shadow-2xl relative group hover:scale-[1.02] transition-all duration-500 ease-out rounded-2xl"
+                  className="bg-white/90 backdrop-blur-md border border-emerald-100/50 shadow-xl hover:shadow-2xl relative group hover:scale-[1.02] transition-all duration-500 ease-out rounded-2xl"
                 >
                   <CardContent className="p-8">
                     <div className="flex items-start gap-6">
@@ -264,12 +285,12 @@ const BusinessServices = () => {
                       </div>
                       <div className="flex-1">
                         <div className="flex items-start justify-between mb-4">
-                          <h4 className="text-xl eb-garamond font-bold text-emerald-900 group-hover:text-emerald-900 transition-colors duration-300 ease-out">{capability.title}</h4>
+                          <h4 className="text-xl eb-garamond font-bold text-black group-hover:text-black transition-colors duration-300 ease-out">{capability.title}</h4>
                           <Badge className="bg-emerald-400/10 text-emerald-600 px-4 py-2 text-sm font-medium group-hover:bg-emerald-400 group-hover:text-white transition-all duration-300 ease-out">{capability.volume}</Badge>
                         </div>
-                        <p className="text-base text-muted-foreground mb-4 group-hover:text-muted-foreground transition-colors duration-300 ease-out leading-relaxed eb-garamond-text">{capability.description}</p>
-                        <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-                          <span className="group-hover:text-muted-foreground transition-colors duration-300 ease-out font-medium">Markets: {capability.markets.join(", ")}</span>
+                        <p className="text-base text-black mb-4 group-hover:text-black transition-colors duration-300 ease-out leading-relaxed eb-garamond-text font-bold">{capability.description}</p>
+                        <div className="flex items-center gap-4 text-sm text-black mb-4">
+                          <span className="group-hover:text-black transition-colors duration-300 ease-out font-bold">Markets: {capability.markets.join(", ")}</span>
                         </div>
                         <div className="flex flex-wrap gap-2">
                           {capability.features.map((feature, idx) => (
@@ -296,21 +317,21 @@ const BusinessServices = () => {
 
         {/* Global Reach Stats */}
         <div ref={statsRef} className="mt-20 grid md:grid-cols-4 gap-8">
-          <div className="text-center p-8 group hover:bg-gradient-to-br hover:from-blue-500/20 hover:to-indigo-500/20 hover:shadow-xl hover:scale-[1.05] rounded-2xl transition-all duration-300 ease-out bg-white/60 backdrop-blur-sm border border-blue-100/50">
+          <div className="text-center p-8 group hover:bg-gradient-to-br hover:from-blue-500/20 hover:to-indigo-500/20 hover:shadow-xl hover:scale-[1.05] rounded-2xl transition-all duration-300 ease-out bg-white/80 backdrop-blur-md border border-blue-100/50">
             <div className="text-4xl font-bold text-blue-500 mb-3 group-hover:text-blue-500 group-hover:scale-110 transition-all duration-300 ease-out">15+</div>
-            <p className="text-base text-muted-foreground group-hover:text-muted-foreground transition-colors duration-300 ease-out font-medium">{t('services.stats.countries')}</p>
+            <p className="text-base text-white group-hover:text-white transition-colors duration-300 ease-out font-medium" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.6)' }}>{t('services.stats.countries')}</p>
           </div>
-          <div className="text-center p-8 group hover:bg-gradient-to-br hover:from-emerald-500/20 hover:to-teal-500/20 hover:shadow-xl hover:scale-[1.05] rounded-2xl transition-all duration-300 ease-out bg-white/60 backdrop-blur-sm border border-emerald-100/50">
+          <div className="text-center p-8 group hover:bg-gradient-to-br hover:from-emerald-500/20 hover:to-teal-500/20 hover:shadow-xl hover:scale-[1.05] rounded-2xl transition-all duration-300 ease-out bg-white/80 backdrop-blur-md border border-emerald-100/50">
             <div className="text-4xl font-bold text-emerald-500 mb-3 group-hover:text-emerald-500 group-hover:scale-110 transition-all duration-300 ease-out">500+</div>
-            <p className="text-base text-muted-foreground group-hover:text-muted-foreground transition-colors duration-300 ease-out font-medium">{t('services.stats.capacity')}</p>
+            <p className="text-base text-white group-hover:text-white transition-colors duration-300 ease-out font-medium" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.6)' }}>{t('services.stats.capacity')}</p>
           </div>
-          <div className="text-center p-8 group hover:bg-gradient-to-br hover:from-cyan-500/20 hover:to-sky-500/20 hover:shadow-xl hover:scale-[1.05] rounded-2xl transition-all duration-300 ease-out bg-white/60 backdrop-blur-sm border border-cyan-100/50">
+          <div className="text-center p-8 group hover:bg-gradient-to-br hover:from-cyan-500/20 hover:to-sky-500/20 hover:shadow-xl hover:scale-[1.05] rounded-2xl transition-all duration-300 ease-out bg-white/80 backdrop-blur-md border border-cyan-100/50">
             <div className="text-4xl font-bold text-cyan-500 mb-3 group-hover:text-cyan-500 group-hover:scale-110 transition-all duration-300 ease-out">24-48h</div>
-            <p className="text-base text-muted-foreground group-hover:text-muted-foreground transition-colors duration-300 ease-out font-medium">{t('services.stats.delivery')}</p>
+            <p className="text-base text-white group-hover:text-white transition-colors duration-300 ease-out font-medium" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.6)' }}>{t('services.stats.delivery')}</p>
           </div>
-          <div className="text-center p-8 group hover:bg-gradient-to-br hover:from-teal-500/20 hover:to-emerald-500/20 hover:shadow-xl hover:scale-[1.05] rounded-2xl transition-all duration-300 ease-out bg-white/60 backdrop-blur-sm border border-teal-100/50">
+          <div className="text-center p-8 group hover:bg-gradient-to-br hover:from-teal-500/20 hover:to-emerald-500/20 hover:shadow-xl hover:scale-[1.05] rounded-2xl transition-all duration-300 ease-out bg-white/80 backdrop-blur-md border border-teal-100/50">
             <div className="text-4xl font-bold text-teal-500 mb-3 group-hover:text-teal-500 group-hover:scale-110 transition-all duration-300 ease-out">100%</div>
-            <p className="text-base text-muted-foreground group-hover:text-muted-foreground transition-colors duration-300 ease-out font-medium">{t('services.stats.quality')}</p>
+            <p className="text-base text-white group-hover:text-white transition-colors duration-300 ease-out font-medium" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.6)' }}>{t('services.stats.quality')}</p>
           </div>
         </div>
       </div>

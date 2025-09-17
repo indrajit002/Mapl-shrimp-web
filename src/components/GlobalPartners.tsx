@@ -11,6 +11,7 @@ import clientTajLogo from "@/assets/client-taj-logo.jpg";
 import clientOberoiLogo from "@/assets/client-oberoi-logo.jpg";
 import clientRelianceLogo from "@/assets/client-reliance-logo.jpg";
 import clientBigbasketLogo from "@/assets/client-bigbasket-logo.jpg";
+import globalPartnershipVideo from "@/assets/Global_partnership.mp4";
 import { 
   Globe, 
   MapPin, 
@@ -256,18 +257,30 @@ const GlobalPartners = () => {
   const currentPartnerData = filteredPartners[currentPartner] || partners[0];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-blue-200 via-blue-100 to-white relative">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-3">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/40 to-white/30"></div>
+    <section className="py-24 relative overflow-hidden">
+      {/* Video Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src={globalPartnershipVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
+      
+      {/* Background Overlay */}
+      <div className="absolute inset-0"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl eb-garamond font-bold mb-6 animate-fade-in-up hover-underline-fade cursor-pointer" style={{ color: '#000000' }}>
+          <h2 className="text-4xl md:text-5xl eb-garamond font-bold mb-6 animate-fade-in-up hover-underline-fade cursor-pointer text-white" style={{ textShadow: '3px 3px 6px rgba(0,0,0,0.8)' }}>
             Global Partners & Clients
           </h2>
-          <p className="text-xl max-w-3xl mx-auto animate-fade-in-up eb-garamond-text" style={{ animationDelay: "0.2s", color: '#000000' }}>
+          <p className="text-xl max-w-3xl mx-auto animate-fade-in-up eb-garamond-text font-bold text-white" style={{ animationDelay: "0.2s", textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>
             Trusted by leading companies and organizations worldwide for premium shrimp products and sustainable practices
           </p>
         </div>
@@ -281,12 +294,11 @@ const GlobalPartners = () => {
                 setActiveRegion(region.id);
                 setCurrentPartner(0);
               }}
-              className={`px-6 py-3 rounded-full transition-all duration-500 ease-out transform hover:scale-110 hover:-translate-y-1 hover:shadow-xl ${
+              className={`px-6 py-3 rounded-full transition-all duration-500 ease-out transform hover:scale-110 hover:-translate-y-1 hover:shadow-xl font-bold ${
                 activeRegion === region.id
-                  ? "bg-white shadow-lg scale-105 font-semibold"
-                  : "bg-white/70 hover:bg-white hover:border-2 hover:border-blue-300 backdrop-blur-sm"
+                  ? "bg-yellow-500 text-black shadow-lg scale-105"
+                  : "bg-white/90 text-black hover:bg-yellow-500 hover:text-black hover:border-2 hover:border-yellow-400"
               }`}
-              style={{ color: '#000000' }}
             >
               {region.name} ({region.count})
             </button>
@@ -295,7 +307,7 @@ const GlobalPartners = () => {
 
         {/* Partner Spotlight */}
         <div className="mb-16">
-          <h3 className="text-2xl eb-garamond font-bold text-center text-ocean-900 mb-8">Partner Spotlight</h3>
+          <h3 className="text-2xl eb-garamond font-bold text-center text-white mb-8" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>Partner Spotlight</h3>
           
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Partner Info */}
@@ -308,53 +320,53 @@ const GlobalPartners = () => {
                 />
                 <div className="flex-1">
                   <div className="flex items-center gap-2 mb-2">
-                    <h4 className="text-2xl eb-garamond font-bold text-ocean-900">{currentPartnerData.name}</h4>
+                    <h4 className="text-2xl eb-garamond font-bold text-white" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>{currentPartnerData.name}</h4>
                     <Badge className={getTypeColor(currentPartnerData.type)}>
                       {getTypeIcon(currentPartnerData.type)} {currentPartnerData.type}
                     </Badge>
                   </div>
-                  <div className="flex items-center gap-2 text-muted-foreground mb-2">
+                  <div className="flex items-center gap-2 text-yellow-300 mb-2 font-bold" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
                     <MapPin className="h-4 w-4" />
                     {currentPartnerData.country}
                   </div>
-                  <p className="text-muted-foreground">{currentPartnerData.description}</p>
+                  <p className="text-white font-bold" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>{currentPartnerData.description}</p>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 bg-white/70 rounded-lg border border-ocean-100/50">
-                  <div className="text-sm text-muted-foreground">Partnership</div>
-                  <div className="font-semibold text-ocean-900">{currentPartnerData.relationship}</div>
+                <div className="p-4 bg-yellow-500/90 rounded-lg border border-yellow-400 shadow-lg">
+                  <div className="text-sm text-black font-bold">Partnership</div>
+                  <div className="font-bold text-black">{currentPartnerData.relationship}</div>
                 </div>
-                <div className="p-4 bg-white/70 rounded-lg border border-ocean-100/50">
-                  <div className="text-sm text-muted-foreground">Since</div>
-                  <div className="font-semibold text-ocean-900">{currentPartnerData.since}</div>
+                <div className="p-4 bg-yellow-500/90 rounded-lg border border-yellow-400 shadow-lg">
+                  <div className="text-sm text-black font-bold">Since</div>
+                  <div className="font-bold text-black">{currentPartnerData.since}</div>
                 </div>
               </div>
 
               <div>
-                <h5 className="eb-garamond font-semibold text-ocean-900 mb-3">Key Achievements</h5>
+                <h5 className="eb-garamond font-bold text-white mb-3" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>Key Achievements</h5>
                 <ul className="space-y-2">
                   {currentPartnerData.achievements.map((achievement, index) => (
                     <li key={index} className="flex items-start gap-2">
-                      <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{achievement}</span>
+                      <CheckCircle className="h-4 w-4 text-yellow-400 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-white font-bold" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>{achievement}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
               {currentPartnerData.testimonial && (
-                <Card className="bg-gradient-to-r from-ocean-50 to-blue-50 border-ocean-200">
+                <Card className="bg-yellow-500/90 border-yellow-400 shadow-lg">
                   <CardContent className="p-6">
-                    <Quote className="h-8 w-8 text-ocean-400 mb-4" />
-                    <p className="text-muted-foreground italic mb-4">
+                    <Quote className="h-8 w-8 text-black mb-4" />
+                    <p className="text-black italic mb-4 font-bold">
                       "{currentPartnerData.testimonial.quote}"
                     </p>
                     <div className="flex items-center gap-3">
                       <div>
-                        <div className="font-semibold text-ocean-900">{currentPartnerData.testimonial.author}</div>
-                        <div className="text-sm text-muted-foreground">{currentPartnerData.testimonial.position}</div>
+                        <div className="font-bold text-black">{currentPartnerData.testimonial.author}</div>
+                        <div className="text-sm text-black font-bold">{currentPartnerData.testimonial.position}</div>
                       </div>
                     </div>
                   </CardContent>
@@ -365,7 +377,7 @@ const GlobalPartners = () => {
             {/* Partner Navigation */}
             <div className="space-y-6">
               <div className="flex justify-between items-center">
-                <h5 className="eb-garamond font-semibold text-ocean-900">All Partners</h5>
+                <h5 className="eb-garamond font-bold text-white" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>All Partners</h5>
                 <div className="flex gap-2">
                   <Button
                     variant="outline"
@@ -407,8 +419,8 @@ const GlobalPartners = () => {
                         className="w-12 h-12 object-contain rounded bg-white p-1"
                       />
                       <div className="flex-1">
-                        <div className="font-semibold text-ocean-900">{partner.name}</div>
-                        <div className="text-sm text-muted-foreground">{partner.country}</div>
+                        <div className="font-bold text-white" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>{partner.name}</div>
+                        <div className="text-sm text-yellow-300 font-bold" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>{partner.country}</div>
                       </div>
                       <Badge className={getTypeColor(partner.type)}>
                         {getTypeIcon(partner.type)}
@@ -423,19 +435,19 @@ const GlobalPartners = () => {
 
         {/* Client Testimonials */}
         <div className="mb-16">
-          <h3 className="text-2xl eb-garamond font-bold text-center mb-8" style={{ color: '#000000' }}>What Our Clients Say</h3>
+          <h3 className="text-2xl eb-garamond font-bold text-center mb-8 text-white" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>What Our Clients Say</h3>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {clients.map((client) => (
-              <Card key={client.id} className="bg-white/90 backdrop-blur-sm border-white/30 shadow-lg hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-110 hover:-translate-y-3 hover:rotate-2 group">
+              <Card key={client.id} className="bg-yellow-500/90 backdrop-blur-sm border-yellow-400 shadow-lg hover:shadow-2xl transition-all duration-500 ease-out transform hover:scale-110 hover:-translate-y-3 hover:rotate-2 group">
                 <CardContent className="p-6 text-center">
                   <img
                     src={client.logo}
                     alt={client.name}
                     className="w-16 h-16 object-contain mx-auto mb-4 transition-all duration-500 ease-out group-hover:scale-125 group-hover:rotate-12"
                   />
-                  <h4 className="eb-garamond font-semibold mb-2" style={{ color: '#000000' }}>{client.name}</h4>
-                  <div className="text-sm mb-3" style={{ color: '#000000' }}>{client.country}</div>
+                  <h4 className="eb-garamond font-bold mb-2 text-black">{client.name}</h4>
+                  <div className="text-sm mb-3 text-black font-bold">{client.country}</div>
                   
                   <div className="flex justify-center mb-3">
                     {[...Array(5)].map((_, i) => (
@@ -449,7 +461,7 @@ const GlobalPartners = () => {
                     ))}
                   </div>
                   
-                  <p className="text-sm italic mb-4 transition-all duration-500 ease-out group-hover:scale-105" style={{ color: '#000000' }}>
+                  <p className="text-sm italic mb-4 transition-all duration-500 ease-out group-hover:scale-105 text-black font-bold">
                     "{client.testimonial}"
                   </p>
                   
@@ -464,32 +476,32 @@ const GlobalPartners = () => {
 
         {/* Global Reach Stats */}
         <div className="grid md:grid-cols-4 gap-8 text-center">
-          <div className="p-6 bg-white/70 rounded-2xl shadow-lg">
-            <Globe className="h-12 w-12 text-ocean-500 mx-auto mb-4" />
-            <div className="text-3xl font-bold text-ocean-900 mb-2">25+</div>
-            <div className="text-muted-foreground">Countries Served</div>
+          <div className="p-6 bg-yellow-500/90 rounded-2xl shadow-lg border border-yellow-400">
+            <Globe className="h-12 w-12 text-black mx-auto mb-4" />
+            <div className="text-3xl font-bold text-black mb-2">25+</div>
+            <div className="text-black font-bold">Countries Served</div>
           </div>
-          <div className="p-6 bg-white/70 rounded-2xl shadow-lg">
-            <Users className="h-12 w-12 text-coral-500 mx-auto mb-4" />
-            <div className="text-3xl font-bold text-ocean-900 mb-2">150+</div>
-            <div className="text-muted-foreground">Active Partners</div>
+          <div className="p-6 bg-yellow-500/90 rounded-2xl shadow-lg border border-yellow-400">
+            <Users className="h-12 w-12 text-black mx-auto mb-4" />
+            <div className="text-3xl font-bold text-black mb-2">150+</div>
+            <div className="text-black font-bold">Active Partners</div>
           </div>
-          <div className="p-6 bg-white/70 rounded-2xl shadow-lg">
-            <Award className="h-12 w-12 text-green-500 mx-auto mb-4" />
-            <div className="text-3xl font-bold text-ocean-900 mb-2">99%</div>
-            <div className="text-muted-foreground">Customer Satisfaction</div>
+          <div className="p-6 bg-yellow-500/90 rounded-2xl shadow-lg border border-yellow-400">
+            <Award className="h-12 w-12 text-black mx-auto mb-4" />
+            <div className="text-3xl font-bold text-black mb-2">99%</div>
+            <div className="text-black font-bold">Customer Satisfaction</div>
           </div>
-          <div className="p-6 bg-white/70 rounded-2xl shadow-lg">
-            <TrendingUp className="h-12 w-12 text-purple-500 mx-auto mb-4" />
-            <div className="text-3xl font-bold text-ocean-900 mb-2">40%</div>
-            <div className="text-muted-foreground">Annual Growth</div>
+          <div className="p-6 bg-yellow-500/90 rounded-2xl shadow-lg border border-yellow-400">
+            <TrendingUp className="h-12 w-12 text-black mx-auto mb-4" />
+            <div className="text-3xl font-bold text-black mb-2">40%</div>
+            <div className="text-black font-bold">Annual Growth</div>
           </div>
         </div>
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <h3 className="text-2xl eb-garamond font-bold mb-4" style={{ color: '#000000' }}>Join Our Global Network</h3>
-          <p className="mb-8 max-w-2xl mx-auto eb-garamond-text" style={{ color: '#000000' }}>
+          <h3 className="text-2xl eb-garamond font-bold mb-4 text-white" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8)' }}>Join Our Global Network</h3>
+          <p className="mb-8 max-w-2xl mx-auto eb-garamond-text text-white font-bold" style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
             Become part of our worldwide network of partners and experience the quality and sustainability that sets us apart.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
