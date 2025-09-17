@@ -2,6 +2,11 @@ import { useState, useRef, useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import shrimpFarmingPonds from "@/assets/shrimp-farming-ponds.jpg";
+import processingPlantInterior from "@/assets/processing-plant-interior.jpg";
+import researchFacility from "@/assets/research-facility.jpg";
+import conservationArea from "@/assets/conservation-area.jpg";
+import companyHeadquarters from "@/assets/company-headquarters.jpg";
 import { 
   Play, 
   Pause, 
@@ -54,7 +59,7 @@ const VirtualTour = () => {
         "Organic feed production",
         "Real-time monitoring technology"
       ],
-      image: "/api/placeholder/800/600",
+      image: shrimpFarmingPonds,
       video: "/api/placeholder/video/ponds.mp4",
       coordinates: { lat: -15.7167, lng: 46.3167 },
       facts: [
@@ -76,7 +81,7 @@ const VirtualTour = () => {
         "Quality control automation",
         "Traceability systems"
       ],
-      image: "/api/placeholder/800/600",
+      image: processingPlantInterior,
       video: "/api/placeholder/video/processing.mp4",
       coordinates: { lat: -15.7200, lng: 46.3200 },
       facts: [
@@ -98,7 +103,7 @@ const VirtualTour = () => {
         "Disease prevention studies",
         "Technology development"
       ],
-      image: "/api/placeholder/800/600",
+      image: researchFacility,
       video: "/api/placeholder/video/research.mp4",
       coordinates: { lat: -15.7100, lng: 46.3100 },
       facts: [
@@ -120,7 +125,7 @@ const VirtualTour = () => {
         "Marine biodiversity monitoring",
         "Community education programs"
       ],
-      image: "/api/placeholder/800/600",
+      image: conservationArea,
       video: "/api/placeholder/video/conservation.mp4",
       coordinates: { lat: -15.7300, lng: 46.3300 },
       facts: [
@@ -142,7 +147,7 @@ const VirtualTour = () => {
         "Sales and marketing teams",
         "International partnerships"
       ],
-      image: "/api/placeholder/800/600",
+      image: companyHeadquarters,
       video: "/api/placeholder/video/headquarters.mp4",
       coordinates: { lat: -15.7000, lng: 46.3000 },
       facts: [

@@ -3,6 +3,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import ascCertificationLogo from "@/assets/asc-certification-logo.jpg";
+import bapCertificationLogo from "@/assets/bap-certification-logo.jpg";
+import haccpCertificationLogo from "@/assets/haccp-certification-logo.jpg";
+import isoCertificationLogo from "@/assets/iso-certification-logo.jpg";
+import communityEducation from "@/assets/community-education.jpg";
+import localFishermen from "@/assets/local-fishermen.jpg";
+import womenEmpowerment from "@/assets/women-empowerment.jpg";
+import cleanWaterAccess from "@/assets/clean-water-access.jpg";
+import sustainableAquaculture from "@/assets/sustainable-aquaculture.jpg";
 import { 
   Leaf, 
   Award, 
@@ -59,7 +68,7 @@ const CSRSustainability = () => {
       issuer: "ASC International",
       year: "2023",
       description: "Certification for responsible aquaculture practices",
-      logo: "/api/placeholder/100/60",
+      logo: ascCertificationLogo,
       status: "active"
     },
     {
@@ -67,7 +76,7 @@ const CSRSustainability = () => {
       issuer: "Global Aquaculture Alliance",
       year: "2023",
       description: "Comprehensive certification for aquaculture facilities",
-      logo: "/api/placeholder/100/60",
+      logo: bapCertificationLogo,
       status: "active"
     },
     {
@@ -75,7 +84,7 @@ const CSRSustainability = () => {
       issuer: "International HACCP Alliance",
       year: "2023",
       description: "Hazard Analysis Critical Control Points certification",
-      logo: "/api/placeholder/100/60",
+      logo: haccpCertificationLogo,
       status: "active"
     },
     {
@@ -83,7 +92,7 @@ const CSRSustainability = () => {
       issuer: "British Retail Consortium",
       year: "2023",
       description: "Food safety certification for processing facilities",
-      logo: "/api/placeholder/100/60",
+      logo: isoCertificationLogo,
       status: "active"
     },
     {
@@ -91,7 +100,7 @@ const CSRSustainability = () => {
       issuer: "International Organization for Standardization",
       year: "2023",
       description: "Environmental management systems certification",
-      logo: "/api/placeholder/100/60",
+      logo: isoCertificationLogo,
       status: "active"
     },
     {
@@ -99,7 +108,7 @@ const CSRSustainability = () => {
       issuer: "Carbon Trust",
       year: "2024",
       description: "Certification for carbon-neutral operations",
-      logo: "/api/placeholder/100/60",
+      logo: bapCertificationLogo,
       status: "active"
     }
   ];
@@ -109,7 +118,7 @@ const CSRSustainability = () => {
       title: "Ocean Conservation Initiative",
       description: "Established 500-hectare marine protected area to preserve coral reefs and marine biodiversity",
       impact: "Protected 200+ marine species and restored 15 coral reef sites",
-      image: "/api/placeholder/400/300",
+      image: sustainableAquaculture,
       category: "environment",
       year: "2023"
     },
@@ -117,7 +126,7 @@ const CSRSustainability = () => {
       title: "Community Education Program",
       description: "Launched sustainable fishing education program for local communities",
       impact: "Trained 500+ local fishermen in sustainable practices",
-      image: "/api/placeholder/400/300",
+      image: communityEducation,
       category: "education",
       year: "2023"
     },
@@ -125,7 +134,7 @@ const CSRSustainability = () => {
       title: "Clean Water Access",
       description: "Installed water purification systems in 10 local villages",
       impact: "Provided clean water access to 5,000+ community members",
-      image: "/api/placeholder/400/300",
+      image: cleanWaterAccess,
       category: "health",
       year: "2023"
     },
@@ -133,7 +142,7 @@ const CSRSustainability = () => {
       title: "Women's Empowerment",
       description: "Created employment opportunities and skills training for women in aquaculture",
       impact: "Employed 200+ women in leadership and technical roles",
-      image: "/api/placeholder/400/300",
+      image: womenEmpowerment,
       category: "community",
       year: "2023"
     }
@@ -309,7 +318,7 @@ const CSRSustainability = () => {
               </div>
               <div className="relative">
                 <img
-                  src="/api/placeholder/600/400"
+                  src={sustainableAquaculture}
                   alt="Sustainable Aquaculture"
                   className="rounded-2xl shadow-2xl"
                 />

@@ -3,6 +3,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import sustainableAquaculture from "@/assets/sustainable-aquaculture.jpg";
+import marineConservation from "@/assets/marine-conservation.jpg";
+import shrimpCooking from "@/assets/shrimp-cooking.jpg";
+import aquacultureTechnology from "@/assets/aquaculture-technology.jpg";
+import aquacultureFacilityAerial from "@/assets/aquaculture-facility-aerial.jpg";
+import seafoodTradeShow from "@/assets/seafood-trade-show.jpg";
+import shrimpProcessingFacility from "@/assets/shrimp-processing-facility.jpg";
+import renewableEnergyAquaculture from "@/assets/renewable-energy-aquaculture.jpg";
+import premiumShrimpProducts from "@/assets/premium-shrimp-products.jpg";
+import chefPreparingShrimp from "@/assets/chef-preparing-shrimp.jpg";
 import { 
   Calendar, 
   User, 
@@ -85,7 +95,7 @@ const MediaBlog = () => {
       readTime: "8 min",
       category: "sustainability",
       tags: ["sustainability", "aquaculture", "future", "innovation"],
-      image: "/api/placeholder/600/400",
+        image: sustainableAquaculture,
       views: 1250,
       likes: 89,
       featured: true
@@ -102,7 +112,7 @@ const MediaBlog = () => {
       readTime: "6 min",
       category: "sustainability",
       tags: ["conservation", "biodiversity", "madagascar", "marine-life"],
-      image: "/api/placeholder/600/400",
+        image: marineConservation,
       views: 980,
       likes: 67,
       featured: false
@@ -119,7 +129,7 @@ const MediaBlog = () => {
       readTime: "12 min",
       category: "recipes",
       tags: ["cooking", "recipes", "chef-tips", "culinary"],
-      image: "/api/placeholder/600/400",
+        image: shrimpCooking,
       views: 2100,
       likes: 156,
       featured: true
@@ -136,7 +146,7 @@ const MediaBlog = () => {
       readTime: "10 min",
       category: "industry",
       tags: ["industry", "trends", "analysis", "market"],
-      image: "/api/placeholder/600/400",
+        image: aquacultureTechnology,
       views: 1750,
       likes: 98,
       featured: false
@@ -153,7 +163,7 @@ const MediaBlog = () => {
       readTime: "5 min",
       category: "company",
       tags: ["facility", "expansion", "technology", "investment"],
-      image: "/api/placeholder/600/400",
+        image: aquacultureFacilityAerial,
       views: 890,
       likes: 45,
       featured: false
@@ -168,7 +178,7 @@ const MediaBlog = () => {
       publishDate: "2024-01-12",
       source: "Aquaculture Today",
       category: "award",
-      image: "/api/placeholder/400/300",
+      image: seafoodTradeShow,
       link: "#"
     },
     {
@@ -178,7 +188,7 @@ const MediaBlog = () => {
       publishDate: "2024-01-09",
       source: "Seafood Business",
       category: "partnership",
-      image: "/api/placeholder/400/300",
+      image: shrimpProcessingFacility,
       link: "#"
     },
     {
@@ -188,7 +198,7 @@ const MediaBlog = () => {
       publishDate: "2024-01-06",
       source: "Environmental News",
       category: "sustainability",
-      image: "/api/placeholder/400/300",
+      image: renewableEnergyAquaculture,
       link: "#"
     }
   ];
@@ -202,7 +212,7 @@ const MediaBlog = () => {
       prepTime: "10 min",
       cookTime: "5 min",
       servings: 4,
-      image: "/api/placeholder/400/300",
+      image: chefPreparingShrimp,
       ingredients: [
         "1 lb premium shrimp, peeled and deveined",
         "4 cloves garlic, minced",
@@ -230,7 +240,7 @@ const MediaBlog = () => {
       prepTime: "20 min",
       cookTime: "0 min",
       servings: 6,
-      image: "/api/placeholder/400/300",
+      image: premiumShrimpProducts,
       ingredients: [
         "1 lb premium shrimp, cooked and chopped",
         "1 red onion, thinly sliced",
@@ -639,7 +649,7 @@ const MediaBlog = () => {
                 <Card key={item} className="bg-white/80 backdrop-blur-sm border-sky-200 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                   <div className="relative aspect-square">
                     <img
-                      src={`/api/placeholder/400/400`}
+                      src={premiumShrimpProducts}
                       alt={`Media ${item}`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />

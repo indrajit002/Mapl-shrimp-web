@@ -3,6 +3,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import shrimpFarmingPonds from "@/assets/shrimp-farming-ponds.jpg";
+import shrimpProcessingFacility from "@/assets/shrimp-processing-facility.jpg";
+import sustainableAquaculture from "@/assets/sustainable-aquaculture.jpg";
+import aquacultureResearchLab from "@/assets/aquaculture-research-lab.jpg";
 import { 
   Ship, 
   Factory, 
@@ -63,7 +67,7 @@ const DivisionsShowcase = () => {
         "Disease prevention protocols",
         "Biodiversity conservation"
       ],
-      image: "/api/placeholder/600/400",
+      image: shrimpFarmingPonds,
       location: "Mahajanga Province, Madagascar",
       established: "2000",
       employees: "150+",
@@ -101,7 +105,7 @@ const DivisionsShowcase = () => {
         "Traceability systems",
         "Custom packaging solutions"
       ],
-      image: "/api/placeholder/600/400",
+      image: shrimpProcessingFacility,
       location: "Mahajanga Industrial Zone",
       established: "2019",
       employees: "200+",
@@ -139,7 +143,7 @@ const DivisionsShowcase = () => {
         "Community development",
         "Ocean conservation projects"
       ],
-      image: "/api/placeholder/600/400",
+      image: sustainableAquaculture,
       location: "Madagascar Coastline",
       established: "2010",
       employees: "50+",
@@ -177,7 +181,7 @@ const DivisionsShowcase = () => {
         "Disease prevention research",
         "Technology development"
       ],
-      image: "/api/placeholder/600/400",
+      image: aquacultureResearchLab,
       location: "Research Center, Madagascar",
       established: "2005",
       employees: "30+",

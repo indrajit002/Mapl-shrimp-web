@@ -2,6 +2,15 @@ import { useState, useRef, useEffect } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import partnerAquafreshLogo from "@/assets/partner-aquafresh-logo.jpg";
+import partnerOceanFreshLogo from "@/assets/partner-ocean-fresh-logo.jpg";
+import partnerIndianOceanLogo from "@/assets/partner-indian-ocean-logo.jpg";
+import partnerMinistryLogo from "@/assets/partner-ministry-logo.jpg";
+import partnerRoyalPalaceLogo from "@/assets/partner-royal-palace-logo.jpg";
+import clientTajLogo from "@/assets/client-taj-logo.jpg";
+import clientOberoiLogo from "@/assets/client-oberoi-logo.jpg";
+import clientRelianceLogo from "@/assets/client-reliance-logo.jpg";
+import clientBigbasketLogo from "@/assets/client-bigbasket-logo.jpg";
 import { 
   Globe, 
   MapPin, 
@@ -56,7 +65,7 @@ const GlobalPartners = () => {
       name: "AquaFood Europe",
       country: "Netherlands",
       region: "europe",
-      logo: "/api/placeholder/120/80",
+      logo: partnerAquafreshLogo,
       type: "distributor",
       relationship: "Exclusive Distributor",
       since: "2018",
@@ -78,7 +87,7 @@ const GlobalPartners = () => {
       name: "Ocean Fresh Asia",
       country: "Singapore",
       region: "asia",
-      logo: "/api/placeholder/120/80",
+      logo: partnerOceanFreshLogo,
       type: "retailer",
       relationship: "Premium Retail Partner",
       since: "2020",
@@ -100,7 +109,7 @@ const GlobalPartners = () => {
       name: "Atlantic Seafood Co.",
       country: "United States",
       region: "americas",
-      logo: "/api/placeholder/120/80",
+      logo: partnerIndianOceanLogo,
       type: "processor",
       relationship: "Processing Partner",
       since: "2015",
@@ -122,7 +131,7 @@ const GlobalPartners = () => {
       name: "Madagascar Ministry of Fisheries",
       country: "Madagascar",
       region: "africa",
-      logo: "/api/placeholder/120/80",
+      logo: partnerMinistryLogo,
       type: "government",
       relationship: "Regulatory Partner",
       since: "2000",
@@ -139,7 +148,7 @@ const GlobalPartners = () => {
       name: "Royal Palace Hotels",
       country: "UAE",
       region: "middle-east",
-      logo: "/api/placeholder/120/80",
+      logo: partnerRoyalPalaceLogo,
       type: "restaurant",
       relationship: "Premium Restaurant Chain",
       since: "2022",
@@ -163,7 +172,7 @@ const GlobalPartners = () => {
       id: "client-1",
       name: "Tokyo Sushi Masters",
       country: "Japan",
-      logo: "/api/placeholder/80/60",
+      logo: clientTajLogo,
       industry: "Restaurant",
       partnership: "Premium Supplier",
       testimonial: "Exceptional quality and consistency. Our customers love the premium taste.",
@@ -173,7 +182,7 @@ const GlobalPartners = () => {
       id: "client-2",
       name: "Paris Fine Dining",
       country: "France",
-      logo: "/api/placeholder/80/60",
+      logo: clientOberoiLogo,
       industry: "Restaurant",
       partnership: "Exclusive Partner",
       testimonial: "The best shrimp we've ever worked with. Truly premium quality.",
@@ -183,7 +192,7 @@ const GlobalPartners = () => {
       id: "client-3",
       name: "New York Seafood Market",
       country: "USA",
-      logo: "/api/placeholder/80/60",
+      logo: clientRelianceLogo,
       industry: "Retail",
       partnership: "Key Supplier",
       testimonial: "Reliable supply and outstanding quality. Our customers keep coming back.",
@@ -193,7 +202,7 @@ const GlobalPartners = () => {
       id: "client-4",
       name: "Sydney Harbor Restaurants",
       country: "Australia",
-      logo: "/api/placeholder/80/60",
+      logo: clientBigbasketLogo,
       industry: "Restaurant",
       partnership: "Premium Supplier",
       testimonial: "Sustainable and delicious. Perfect for our eco-conscious customers.",

@@ -1,0 +1,203 @@
+{
+  "total": 28,
+  "optimized": 28,
+  "errors": 0,
+  "details": [
+    {
+      "file": "aquaculture-ponds.jpg",
+      "originalSize": "232.36 KB",
+      "optimizedSize": "232.36 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1200x800"
+    },
+    {
+      "file": "aquaculture-tech.jpg",
+      "originalSize": "410.29 KB",
+      "optimizedSize": "410.29 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1200x800"
+    },
+    {
+      "file": "business-handshake.jpg",
+      "originalSize": "447.84 KB",
+      "optimizedSize": "447.84 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1200x800"
+    },
+    {
+      "file": "ceo-portrait.jpg",
+      "originalSize": "72.84 KB",
+      "optimizedSize": "72.84 KB",
+      "compressionRatio": "0.0%",
+      "settings": "800x800"
+    },
+    {
+      "file": "certification-award.jpg",
+      "originalSize": "130.10 KB",
+      "optimizedSize": "130.10 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1200x800"
+    },
+    {
+      "file": "eco-friendly.jpg",
+      "originalSize": "404.25 KB",
+      "optimizedSize": "404.25 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1200x800"
+    },
+    {
+      "file": "expert-portrait.jpg",
+      "originalSize": "365.26 KB",
+      "optimizedSize": "365.26 KB",
+      "compressionRatio": "0.0%",
+      "settings": "800x800"
+    },
+    {
+      "file": "export-shipping.jpg",
+      "originalSize": "673.09 KB",
+      "optimizedSize": "673.09 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1200x800"
+    },
+    {
+      "file": "facility-interior.jpg",
+      "originalSize": "81.82 KB",
+      "optimizedSize": "81.82 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1920x1080"
+    },
+    {
+      "file": "fresh-shrimp-1.jpg",
+      "originalSize": "0.03 KB",
+      "optimizedSize": "0.03 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1200x800"
+    },
+    {
+      "file": "hero-shrimp-farm-2.jpg",
+      "originalSize": "404.25 KB",
+      "optimizedSize": "404.25 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1920x1080"
+    },
+    {
+      "file": "hero-shrimp-farm.jpg",
+      "originalSize": "234.54 KB",
+      "optimizedSize": "234.54 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1920x1080"
+    },
+    {
+      "file": "indian-coastline.jpg",
+      "originalSize": "277.31 KB",
+      "optimizedSize": "277.31 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1200x800"
+    },
+    {
+      "file": "local-community.jpg",
+      "originalSize": "447.84 KB",
+      "optimizedSize": "447.84 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1200x800"
+    },
+    {
+      "file": "logo.jpg",
+      "originalSize": "89.24 KB",
+      "optimizedSize": "89.24 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1200x800"
+    },
+    {
+      "file": "madagascar-coast.jpg",
+      "originalSize": "49.66 KB",
+      "optimizedSize": "49.66 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1200x800"
+    },
+    {
+      "file": "modern-facility.jpg",
+      "originalSize": "277.31 KB",
+      "optimizedSize": "277.31 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1920x1080"
+    },
+    {
+      "file": "monitoring-system.jpg",
+      "originalSize": "225.48 KB",
+      "optimizedSize": "225.48 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1200x800"
+    },
+    {
+      "file": "packaged-shrimp.jpg",
+      "originalSize": "114.92 KB",
+      "optimizedSize": "114.92 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1200x800"
+    },
+    {
+      "file": "premium-shrimp.jpg",
+      "originalSize": "60.18 KB",
+      "optimizedSize": "60.18 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1200x800"
+    },
+    {
+      "file": "quality-lab.jpg",
+      "originalSize": "169.65 KB",
+      "optimizedSize": "169.65 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1920x1080"
+    },
+    {
+      "file": "restaurant-kitchen.jpg",
+      "originalSize": "261.26 KB",
+      "optimizedSize": "261.26 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1200x800"
+    },
+    {
+      "file": "scientist-lab.jpg",
+      "originalSize": "225.48 KB",
+      "optimizedSize": "225.48 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1920x1080"
+    },
+    {
+      "file": "Shrimp-Loading.png",
+      "originalSize": "33.51 KB",
+      "optimizedSize": "33.51 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1200x800"
+    },
+    {
+      "file": "shrimp-processing.jpg",
+      "originalSize": "455.79 KB",
+      "optimizedSize": "455.79 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1200x800"
+    },
+    {
+      "file": "sustainable-farming.jpg",
+      "originalSize": "455.79 KB",
+      "optimizedSize": "455.79 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1200x800"
+    },
+    {
+      "file": "team-meeting.jpg",
+      "originalSize": "336.77 KB",
+      "optimizedSize": "336.77 KB",
+      "compressionRatio": "0.0%",
+      "settings": "800x800"
+    },
+    {
+      "file": "water-treatment.jpg",
+      "originalSize": "410.29 KB",
+      "optimizedSize": "410.29 KB",
+      "compressionRatio": "0.0%",
+      "settings": "1200x800"
+    }
+  ]
+}
