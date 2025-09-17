@@ -8,6 +8,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLanguage } from "@/contexts/LanguageContext";
 import globalVideo from "@/assets/Global_video.mp4";
+// import globalVideo from "@/assets/Global_video2.mp4";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);

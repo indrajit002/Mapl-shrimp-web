@@ -41,18 +41,18 @@ const companies = [
 
 const CompaniesGrid = () => {
   return (
-    <section id="partners" className="py-32 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
+    <section id="partners" className="py-32 bg-gray-100 relative overflow-hidden">
       {/* Enhanced Background Pattern */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 via-indigo-100/20 to-purple-100/30"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
-        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.1),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-200/50 via-gray-100/30 to-gray-200/50"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(107,114,128,0.1),transparent_50%)]"></div>
+        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(75,85,99,0.1),transparent_50%)]"></div>
       </div>
       
       {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-blue-400/20 to-indigo-400/20 rounded-full blur-xl"></div>
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 rounded-full blur-2xl"></div>
-      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 rounded-full blur-lg"></div>
+      <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-gray-400/20 to-gray-500/20 rounded-full blur-xl"></div>
+      <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-gray-500/20 to-gray-600/20 rounded-full blur-2xl"></div>
+      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-gradient-to-r from-gray-400/20 to-gray-500/20 rounded-full blur-lg"></div>
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Enhanced Header */}
@@ -62,10 +62,10 @@ const CompaniesGrid = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h2 className="text-5xl md:text-6xl eb-garamond font-bold bg-gradient-to-r from-slate-800 via-blue-800 to-indigo-800 bg-clip-text text-transparent mb-6 leading-tight">
+          <h2 className="text-5xl md:text-6xl eb-garamond font-bold mb-6 leading-tight" style={{ color: '#1b365d' }}>
             Trusted by Industry Leaders
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl max-w-3xl mx-auto leading-relaxed" style={{ color: '#2F425E' }}>
             From Michelin-starred restaurants to premium retailers, the world's most 
             discerning buyers choose Mayank Aquaculture for uncompromising quality and sustainability.
           </p>

@@ -13,6 +13,7 @@ import shrimpProcessingFacility from "@/assets/shrimp-processing-facility.jpg";
 import renewableEnergyAquaculture from "@/assets/renewable-energy-aquaculture.jpg";
 import premiumShrimpProducts from "@/assets/premium-shrimp-products.jpg";
 import chefPreparingShrimp from "@/assets/chef-preparing-shrimp.jpg";
+import mediaImage from "@/assets/Media_image.jpg";
 import { 
   Calendar, 
   User, 
@@ -312,81 +313,93 @@ const MediaBlog = () => {
   };
 
   return (
-    <section className="py-32 bg-gradient-to-br from-slate-50 via-cyan-50 to-teal-50 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-100 to-teal-100"></div>
+    <section className="py-24 relative overflow-hidden bg-gradient-to-br from-gray-100 via-blue-50 to-indigo-100">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-"
+        style={{ backgroundImage: `url(${mediaImage})` }}
+      ></div>
+      
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-20 h-20 bg-cyan-300/20 rounded-full blur-xl"></div>
-      <div className="absolute bottom-20 right-10 w-32 h-32 bg-teal-300/20 rounded-full blur-xl"></div>
-      <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-emerald-300/20 rounded-full blur-lg"></div>
-
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl eb-garamond font-bold text-ocean-900 mb-8 animate-fade-in-up">
-            Media & Blog
-          </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed animate-fade-in-up eb-garamond-text" style={{ animationDelay: "0.2s" }}>
-            Stay updated with industry insights, recipes, sustainability stories, and company news
-          </p>
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 mb-6">
+            <Newspaper className="h-5 w-5 text-blue-600" />
+            <span className="text-blue-700 font-semibold">Latest Updates</span>
+          </div>
+          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 mb-6">
+            <h2 className="text-5xl md:text-6xl eb-garamond font-bold text-black mb-6">
+              Media & Blog
+            </h2>
+            <p className="text-xl text-black max-w-3xl mx-auto leading-relaxed eb-garamond-text font-bold">
+              Discover insights, stories, and innovations from the world of sustainable aquaculture
+            </p>
+          </div>
         </div>
 
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-12">
-          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 gap-6 bg-transparent p-0 mb-8">
-            <TabsTrigger 
-              value="blog"
-              className="flex items-center justify-center gap-2 px-6 py-5 rounded-xl font-semibold transition-all duration-300 text-center min-h-[70px] bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl border border-cyan-100/30 data-[state=active]:bg-gradient-to-r data-[state=active]:from-cyan-500 data-[state=active]:to-blue-500 data-[state=active]:text-white data-[state=active]:shadow-2xl data-[state=inactive]:text-cyan-600 data-[state=inactive]:hover:text-cyan-700 data-[state=inactive]:hover:bg-cyan-50"
-            >
-              <FileText className="h-5 w-5" />
-              <span className="text-sm sm:text-base">Blog</span>
-            </TabsTrigger>
-            <TabsTrigger 
-              value="press"
-              className="flex items-center justify-center gap-2 px-6 py-5 rounded-xl font-semibold transition-all duration-300 text-center min-h-[70px] bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl border border-teal-100/30 data-[state=active]:bg-gradient-to-r data-[state=active]:from-teal-500 data-[state=active]:to-emerald-500 data-[state=active]:text-white data-[state=active]:shadow-2xl data-[state=inactive]:text-teal-600 data-[state=inactive]:hover:text-teal-700 data-[state=inactive]:hover:bg-teal-50"
-            >
-              <Newspaper className="h-5 w-5" />
-              <span className="text-sm sm:text-base">Press</span>
-            </TabsTrigger>
-            <TabsTrigger 
-              value="recipes"
-              className="flex items-center justify-center gap-2 px-6 py-5 rounded-xl font-semibold transition-all duration-300 text-center min-h-[70px] bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl border border-emerald-100/30 data-[state=active]:bg-gradient-to-r data-[state=active]:from-emerald-500 data-[state=active]:to-green-500 data-[state=active]:text-white data-[state=active]:shadow-2xl data-[state=inactive]:text-emerald-600 data-[state=inactive]:hover:text-emerald-700 data-[state=inactive]:hover:bg-emerald-50"
-            >
-              <ChefHat className="h-5 w-5" />
-              <span className="text-sm sm:text-base">Recipes</span>
-            </TabsTrigger>
-            <TabsTrigger 
-              value="media"
-              className="flex items-center justify-center gap-2 px-6 py-5 rounded-xl font-semibold transition-all duration-300 text-center min-h-[70px] bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl border border-sky-100/30 data-[state=active]:bg-gradient-to-r data-[state=active]:from-sky-500 data-[state=active]:to-cyan-500 data-[state=active]:text-white data-[state=active]:shadow-2xl data-[state=inactive]:text-sky-600 data-[state=inactive]:hover:text-sky-700 data-[state=inactive]:hover:bg-sky-50"
-            >
-              <Image className="h-5 w-5" />
-              <span className="text-sm sm:text-base">Media</span>
-            </TabsTrigger>
-          </TabsList>
+        {/* Navigation Tabs */}
+        <div className="flex flex-wrap justify-center gap-4 mb-16">
+          {[
+            { id: 'blog', label: 'Blog', icon: FileText, color: 'from-blue-500 to-cyan-500' },
+            { id: 'press', label: 'Press', icon: Newspaper, color: 'from-emerald-500 to-teal-500' },
+            { id: 'recipes', label: 'Recipes', icon: ChefHat, color: 'from-orange-500 to-red-500' },
+            { id: 'media', label: 'Gallery', icon: Image, color: 'from-purple-500 to-pink-500' }
+          ].map((tab) => {
+            const Icon = tab.icon;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`group relative px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 ${
+                  activeTab === tab.id
+                    ? `bg-gradient-to-r ${tab.color} text-white shadow-2xl`
+                    : 'bg-white/80 text-gray-700 hover:bg-white hover:text-gray-900 backdrop-blur-sm border border-gray-200'
+                }`}
+              >
+                <div className="flex items-center gap-3">
+                  <Icon className="h-6 w-6" />
+                  <span>{tab.label}</span>
+                </div>
+                {activeTab === tab.id && (
+                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-blue-500 rounded-full"></div>
+                )}
+              </button>
+            );
+          })}
+        </div>
 
+        {/* Content Sections */}
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-16">
+          {/* Blog Section */}
           <TabsContent value="blog" className="space-y-12">
             {/* Search and Filter */}
             <div className="flex flex-col md:flex-row gap-6 mb-12">
               <div className="relative flex-1">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-500" />
                 <input
                   type="text"
                   placeholder="Search articles..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-6 py-4 border-2 border-cyan-200 rounded-xl focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg bg-white/80 backdrop-blur-sm shadow-lg"
+                  className="w-full pl-12 pr-6 py-4 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg text-gray-900 placeholder-gray-500"
                 />
               </div>
               <div className="flex gap-3">
-                <Filter className="h-5 w-5 text-muted-foreground mt-3" />
+                <Filter className="h-5 w-5 text-gray-500 mt-3" />
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-6 py-4 border-2 border-cyan-200 rounded-xl focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg bg-white/80 backdrop-blur-sm shadow-lg"
+                  className="px-6 py-4 bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg text-gray-900"
                 >
                   {categories.map((category) => (
-                    <option key={category.id} value={category.id}>
+                    <option key={category.id} value={category.id} className="bg-white">
                       {category.name} ({category.count})
                     </option>
                   ))}
@@ -396,60 +409,63 @@ const MediaBlog = () => {
 
             {/* Featured Post */}
             {filteredPosts.some(post => post.featured) && (
-              <Card className="bg-gradient-to-r from-cyan-50 to-teal-50 border-cyan-200 shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-300">
-                <div className="grid lg:grid-cols-2 gap-0">
-                  <div className="relative">
-                    <img
-                      src={filteredPosts.find(p => p.featured)?.image}
-                      alt="Featured post"
-                      className="w-full h-80 lg:h-full object-cover"
-                    />
-                    <div className="absolute top-6 left-6">
-                      <Badge className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 text-sm font-medium shadow-lg">Featured</Badge>
+              <div className="relative group mb-12">
+                <div className="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-3xl overflow-hidden hover:bg-white transition-all duration-500 shadow-xl">
+                  <div className="grid lg:grid-cols-2 gap-0">
+                    <div className="relative overflow-hidden">
+                      <img
+                        src={filteredPosts.find(p => p.featured)?.image}
+                        alt="Featured post"
+                        className="w-full h-80 lg:h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+                      <div className="absolute top-6 left-6">
+                        <Badge className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 text-sm font-medium shadow-lg">Featured</Badge>
+                      </div>
+                    </div>
+                    <div className="p-8 lg:p-12">
+                      <div className="flex items-center gap-3 mb-6">
+                        {getCategoryIcon(filteredPosts.find(p => p.featured)?.category || "")}
+                        <Badge className="bg-blue-100 text-blue-800 px-4 py-2 text-sm font-medium">
+                          {filteredPosts.find(p => p.featured)?.category}
+                        </Badge>
+                      </div>
+                      <h3 className="text-3xl eb-garamond font-bold text-gray-900 mb-6 leading-tight">
+                        {filteredPosts.find(p => p.featured)?.title}
+                      </h3>
+                      <p className="text-lg text-gray-700 mb-8 leading-relaxed eb-garamond-text">
+                        {filteredPosts.find(p => p.featured)?.excerpt}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-6 text-base text-gray-600">
+                          <div className="flex items-center gap-2">
+                            <User className="h-5 w-5" />
+                            {filteredPosts.find(p => p.featured)?.author}
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Calendar className="h-5 w-5" />
+                            {filteredPosts.find(p => p.featured)?.publishDate}
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Eye className="h-5 w-5" />
+                            {filteredPosts.find(p => p.featured)?.views}
+                          </div>
+                        </div>
+                        <Button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl">
+                          Read More
+                          <ArrowRight className="h-5 w-5 ml-2" />
+                        </Button>
+                      </div>
                     </div>
                   </div>
-                  <CardContent className="p-10">
-                    <div className="flex items-center gap-3 mb-6">
-                      {getCategoryIcon(filteredPosts.find(p => p.featured)?.category || "")}
-                      <Badge className={`${getCategoryColor(filteredPosts.find(p => p.featured)?.category || "")} px-4 py-2 text-sm font-medium`}>
-                        {filteredPosts.find(p => p.featured)?.category}
-                      </Badge>
-                    </div>
-                    <h3 className="text-3xl eb-garamond font-bold text-ocean-900 mb-6 leading-tight">
-                      {filteredPosts.find(p => p.featured)?.title}
-                    </h3>
-                    <p className="text-lg text-muted-foreground mb-8 leading-relaxed eb-garamond-text">
-                      {filteredPosts.find(p => p.featured)?.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-6 text-base text-muted-foreground">
-                        <div className="flex items-center gap-2">
-                          <User className="h-5 w-5" />
-                          {filteredPosts.find(p => p.featured)?.author}
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Calendar className="h-5 w-5" />
-                          {filteredPosts.find(p => p.featured)?.publishDate}
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Eye className="h-5 w-5" />
-                          {filteredPosts.find(p => p.featured)?.views}
-                        </div>
-                      </div>
-                      <Button className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white px-6 py-3 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl">
-                        Read More
-                        <ArrowRight className="h-5 w-5 ml-2" />
-                      </Button>
-                    </div>
-                  </CardContent>
                 </div>
-              </Card>
+              </div>
             )}
 
             {/* Blog Posts Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
               {filteredPosts.filter(post => !post.featured).map((post) => (
-                <Card key={post.id} className="bg-white/80 backdrop-blur-sm border-cyan-200 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group">
+                <Card key={post.id} className="bg-white/90 backdrop-blur-sm border-gray-200 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                   <div className="relative">
                     <img
                       src={post.image}
@@ -464,22 +480,22 @@ const MediaBlog = () => {
                     </div>
                   </div>
                   <CardContent className="p-8">
-                    <h3 className="text-2xl eb-garamond font-bold text-ocean-900 mb-4 line-clamp-2 leading-tight">
+                    <h3 className="text-2xl eb-garamond font-bold text-gray-900 mb-4 line-clamp-2 leading-tight">
                       {post.title}
                     </h3>
-                    <p className="text-lg text-muted-foreground mb-6 line-clamp-3 leading-relaxed">
+                    <p className="text-lg text-gray-700 mb-6 line-clamp-3 leading-relaxed eb-garamond-text">
                       {post.excerpt}
                     </p>
                     
                     <div className="flex flex-wrap gap-2 mb-6">
                       {post.tags.slice(0, 3).map((tag) => (
-                        <Badge key={tag} variant="outline" className="text-sm px-3 py-1">
+                        <Badge key={tag} variant="outline" className="text-sm px-3 py-1 border-gray-300 text-gray-600">
                           #{tag}
                         </Badge>
                       ))}
                     </div>
 
-                    <div className="flex items-center justify-between text-base text-muted-foreground mb-6">
+                    <div className="flex items-center justify-between text-base text-gray-600 mb-6">
                       <div className="flex items-center gap-6">
                         <div className="flex items-center gap-2">
                           <User className="h-5 w-5" />
@@ -497,14 +513,14 @@ const MediaBlog = () => {
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-6 text-base text-muted-foreground">
+                      <div className="flex items-center gap-6 text-base text-gray-600">
                         <div className="flex items-center gap-2">
                           <Heart className="h-5 w-5" />
                           {post.likes}
                         </div>
                         <div className="font-medium">{post.readTime} read</div>
                       </div>
-                      <Button variant="outline" size="sm" className="border-2 border-cyan-200 text-cyan-600 hover:bg-cyan-50 px-4 py-2 text-base font-semibold rounded-xl">
+                      <Button variant="outline" size="sm" className="border-2 border-blue-200 text-blue-600 hover:bg-blue-50 px-4 py-2 text-base font-semibold rounded-xl">
                         Read More
                         <ArrowRight className="h-4 w-4 ml-2" />
                       </Button>
@@ -517,15 +533,15 @@ const MediaBlog = () => {
 
           <TabsContent value="press" className="space-y-12">
             <div className="text-center mb-12">
-              <h3 className="text-4xl eb-garamond font-bold text-ocean-900 mb-6">Press Releases</h3>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <h3 className="text-4xl eb-garamond font-bold text-gray-900 mb-6">Press Releases</h3>
+              <p className="text-gray-700 max-w-2xl mx-auto eb-garamond-text">
                 Latest news and announcements from MAPL
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {pressReleases.map((release) => (
-                <Card key={release.id} className="bg-white/70 backdrop-blur-sm border-ocean-200 shadow-lg hover:shadow-xl transition-all duration-300">
+                <Card key={release.id} className="bg-white/90 backdrop-blur-sm border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
                   <div className="relative">
                     <img
                       src={release.image}
@@ -539,17 +555,17 @@ const MediaBlog = () => {
                     </div>
                   </div>
                   <CardContent className="p-6">
-                    <h4 className="text-lg eb-garamond font-bold text-ocean-900 mb-2 line-clamp-2">
+                    <h4 className="text-lg eb-garamond font-bold text-gray-900 mb-2 line-clamp-2">
                       {release.title}
                     </h4>
-                    <p className="text-muted-foreground mb-4 line-clamp-3">
+                    <p className="text-gray-700 mb-4 line-clamp-3 eb-garamond-text">
                       {release.summary}
                     </p>
-                    <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
+                    <div className="flex items-center justify-between text-sm text-gray-600 mb-4">
                       <div>{release.source}</div>
                       <div>{release.publishDate}</div>
                     </div>
-                    <Button variant="outline" size="sm" className="w-full">
+                    <Button variant="outline" size="sm" className="w-full border-blue-200 text-blue-600 hover:bg-blue-50">
                       <ExternalLink className="h-4 w-4 mr-2" />
                       Read Full Release
                     </Button>
@@ -561,15 +577,15 @@ const MediaBlog = () => {
 
           <TabsContent value="recipes" className="space-y-12">
             <div className="text-center mb-12">
-              <h3 className="text-4xl eb-garamond font-bold text-ocean-900 mb-6">Chef's Recipes</h3>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <h3 className="text-4xl eb-garamond font-bold text-gray-900 mb-6">Chef's Recipes</h3>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed eb-garamond-text">
                 Professional recipes and cooking techniques from our partner chefs
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-10">
               {recipes.map((recipe) => (
-                <Card key={recipe.id} className="bg-white/80 backdrop-blur-sm border-emerald-200 shadow-xl hover:shadow-2xl transition-all duration-300 group">
+                <Card key={recipe.id} className="bg-white/90 backdrop-blur-sm border-gray-200 shadow-xl hover:shadow-2xl transition-all duration-300 group">
                   <div className="relative">
                     <img
                       src={recipe.image}
@@ -582,50 +598,50 @@ const MediaBlog = () => {
                       </Badge>
                     </div>
                     <div className="absolute top-6 right-6">
-                      <Badge variant="outline" className="bg-white/90 px-3 py-1 text-sm font-medium shadow-lg">
+                      <Badge variant="outline" className="bg-white/90 px-3 py-1 text-sm font-medium shadow-lg border-gray-300">
                         {recipe.category}
                       </Badge>
                     </div>
                   </div>
                   <CardContent className="p-8">
-                    <h4 className="text-2xl eb-garamond font-bold text-ocean-900 mb-4 leading-tight">{recipe.title}</h4>
-                    <p className="text-lg text-muted-foreground mb-6 leading-relaxed">{recipe.description}</p>
+                    <h4 className="text-2xl eb-garamond font-bold text-gray-900 mb-4 leading-tight">{recipe.title}</h4>
+                    <p className="text-lg text-gray-700 mb-6 leading-relaxed eb-garamond-text">{recipe.description}</p>
                     
                     <div className="grid grid-cols-3 gap-6 mb-6 text-center">
-                      <div className="p-4 bg-emerald-50 rounded-xl">
-                        <div className="text-base text-muted-foreground mb-2">Prep Time</div>
-                        <div className="text-xl font-bold text-emerald-900">{recipe.prepTime}</div>
+                      <div className="p-4 bg-blue-50 rounded-xl">
+                        <div className="text-base text-gray-600 mb-2">Prep Time</div>
+                        <div className="text-xl font-bold text-blue-900">{recipe.prepTime}</div>
                       </div>
-                      <div className="p-4 bg-emerald-50 rounded-xl">
-                        <div className="text-base text-muted-foreground mb-2">Cook Time</div>
-                        <div className="text-xl font-bold text-emerald-900">{recipe.cookTime}</div>
+                      <div className="p-4 bg-blue-50 rounded-xl">
+                        <div className="text-base text-gray-600 mb-2">Cook Time</div>
+                        <div className="text-xl font-bold text-blue-900">{recipe.cookTime}</div>
                       </div>
-                      <div className="p-4 bg-emerald-50 rounded-xl">
-                        <div className="text-base text-muted-foreground mb-2">Servings</div>
-                        <div className="text-xl font-bold text-emerald-900">{recipe.servings}</div>
+                      <div className="p-4 bg-blue-50 rounded-xl">
+                        <div className="text-base text-gray-600 mb-2">Servings</div>
+                        <div className="text-xl font-bold text-blue-900">{recipe.servings}</div>
                       </div>
                     </div>
 
                     <div className="mb-4">
-                      <h5 className="eb-garamond font-semibold text-ocean-900 mb-2">Ingredients</h5>
-                      <ul className="text-sm text-muted-foreground space-y-1">
+                      <h5 className="eb-garamond font-semibold text-gray-900 mb-2">Ingredients</h5>
+                      <ul className="text-sm text-gray-700 space-y-1">
                         {recipe.ingredients.slice(0, 4).map((ingredient, index) => (
                           <li key={index} className="flex items-start gap-2">
-                            <div className="w-1 h-1 bg-ocean-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <div className="w-1 h-1 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
                             {ingredient}
                           </li>
                         ))}
                         {recipe.ingredients.length > 4 && (
-                          <li className="text-ocean-600">+{recipe.ingredients.length - 4} more ingredients</li>
+                          <li className="text-blue-600">+{recipe.ingredients.length - 4} more ingredients</li>
                         )}
                       </ul>
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <div className="text-sm text-muted-foreground">
+                      <div className="text-sm text-gray-600">
                         By {recipe.chef}
                       </div>
-                      <Button variant="outline" size="sm">
+                      <Button variant="outline" size="sm" className="border-blue-200 text-blue-600 hover:bg-blue-50">
                         <Play className="h-4 w-4 mr-2" />
                         View Recipe
                       </Button>
@@ -638,15 +654,15 @@ const MediaBlog = () => {
 
           <TabsContent value="media" className="space-y-12">
             <div className="text-center mb-12">
-              <h3 className="text-4xl eb-garamond font-bold text-ocean-900 mb-6">Media Gallery</h3>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <h3 className="text-4xl eb-garamond font-bold text-gray-900 mb-6">Media Gallery</h3>
+              <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed eb-garamond-text">
                 High-resolution images, videos, and media assets
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-                <Card key={item} className="bg-white/80 backdrop-blur-sm border-sky-200 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group">
+                <Card key={item} className="bg-white/90 backdrop-blur-sm border-gray-200 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                   <div className="relative aspect-square">
                     <img
                       src={premiumShrimpProducts}
@@ -656,7 +672,7 @@ const MediaBlog = () => {
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                       <Button
                         size="sm"
-                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 text-sky-900 hover:bg-white px-4 py-2 rounded-xl font-semibold"
+                        className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 text-blue-900 hover:bg-white px-4 py-2 rounded-xl font-semibold"
                       >
                         <Image className="h-5 w-5 mr-2" />
                         View

@@ -358,7 +358,7 @@ const InteractiveTimeline = () => {
         <div className="mt-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl eb-garamond font-bold text-black mb-4" style={{ textShadow: '0 2px 4px rgba(255,255,255,0.8)' }}>Our Impact in Numbers</h3>
-            <p className="text-gray-700 text-lg eb-garamond-text" style={{ textShadow: '0 1px 2px rgba(255,255,255,0.6)' }}>Milestones that define our journey</p>
+            <p className="text-white text-lg eb-garamond-text" style={{ textShadow: '0 1px 2px rgba(255,255,255,0.6)' }}>Milestones that define our journey</p>
           </div>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center group">
